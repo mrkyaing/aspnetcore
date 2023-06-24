@@ -1,0 +1,36 @@
+﻿<style>
+    body{
+        font-size:20px;
+    }
+
+    label{
+        font-weight:bold;
+        font-family:cursive;
+    }
+   
+   .result{
+       color:blue;
+       font-weight:bold;
+   }
+   
+</style>
+<body>
+    <form action="/Exercise/Add" method="get">
+    <div>
+    <label>Number 1 : </label>
+    <input type="number" name="n1" required/>
+    <br /> <br />
+    <label>Number 2 : </label>
+    <input type="number" name="n2" required/>
+    <br /><br/>
+    <label class="result">Result: </label>
+    <label >@ViewBag.result</label>
+    <br /><br/>
+    </div>
+    <br />
+    <div>
+    <input type="submit" value="Calculate"/>
+    <input type="reset" value="Cancel"/>
+    </div>
+    </form>
+</body>

@@ -13,9 +13,6 @@ app.MapGet("/me", ()=>"mr kyaing");
 //mapping the routes to hit the urls
 //eg www.fb.com/profile/me
 
-app.MapControllerRoute(
-    name:"default",
-    pattern:"{controller=home}/{action=index}/{id?}"
-    );
+app.MapControllerRoute(name:"default",pattern:"{controller=home}/{action=index}/{id?}");
 //run the web app
 app.Run();

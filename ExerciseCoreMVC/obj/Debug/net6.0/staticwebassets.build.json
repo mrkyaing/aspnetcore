@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "re+sGOerGAfdvU5VtlI4zdIexWhi0QH08V7npurDdfg=",
+  "Source": "ExerciseCoreMVC",
+  "BasePath": "_content/ExerciseCoreMVC",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ExerciseCoreMVC\\wwwroot",
+      "Source": "ExerciseCoreMVC",
+      "ContentRoot": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\wwwroot\\",
+      "BasePath": "_content/ExerciseCoreMVC",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\wwwroot\\DownloadFiles\\gg.pdf",
+      "SourceId": "ExerciseCoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\wwwroot\\",
+      "BasePath": "_content/ExerciseCoreMVC",
+      "RelativePath": "DownloadFiles/gg.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\DownloadFiles\\gg.pdf"
+    },
+    {
+      "Identity": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\wwwroot\\DownloadFiles\\gg.txt",
+      "SourceId": "ExerciseCoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\wwwroot\\",
+      "BasePath": "_content/ExerciseCoreMVC",
+      "RelativePath": "DownloadFiles/gg.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\DownloadFiles\\gg.txt"
+    },
+    {
+      "Identity": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\wwwroot\\DownloadFiles\\me.txt",
+      "SourceId": "ExerciseCoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\wwwroot\\",
+      "BasePath": "_content/ExerciseCoreMVC",
+      "RelativePath": "DownloadFiles/me.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\DownloadFiles\\me.txt"
+    }
+  ]
+}

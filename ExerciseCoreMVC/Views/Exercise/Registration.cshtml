@@ -1,0 +1,25 @@
+﻿<style>
+    body{
+        font-family:cursive;
+    }
+</style>
+<body>
+
+<form action="/Exercise/Register" method="get">
+    <p>
+    <lable>First Name : </lable>
+    <input type="text" name="firstName"/>
+    </p>
+    <p>
+    <lable>Last Name : </lable>
+    <input type="text" name="lastName" />
+    </p>
+    <p>
+    <label>Full Name : </label>
+    <label style="color:brown; " >@ViewBag.fullName</label>
+    </p>
+    <input type="submit" value="Register" />
+    <input type="reset" value="Cancel"/>
+</form>
+
+</body>
