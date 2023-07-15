@@ -1,0 +1,22 @@
+<script>
+    function adding() {
+        var n1 = document.getElementById("txtNumber1").value;
+        var n2 = document.getElementById("txtNumber2").value;
+        document.getElementById("txtResult").value = Number(n1) + Number(n2);
+    }
+</script>
+<form>
+    <p>
+        <label>Number 1</label>
+        <input type="number" id="txtNumber1">
+    </p>
+    <p>
+        <label>Number 2</label>
+        <input type="number" id="txtNumber2">
+    </p>
+    <p> <input type="button" value="calculate" onclick="adding()"></p>
+    <p>
+        <label>Result</label>
+        <input type="number" id="txtResult" readonly>
+    </p>
+</form>

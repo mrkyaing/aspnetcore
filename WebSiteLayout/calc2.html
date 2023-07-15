@@ -1,0 +1,29 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--CDN-->
+</head>
+<script>
+    $(document).ready(function() {
+        $("#btncalc").click(function() {
+            var n1 = $("#txtNumber1").val();
+            var n2 = $("#txtNumber2").val();
+            var result = Number(n1) + Number(n2);
+            $("#txtResult").val(result);
+        });
+    });
+</script>
+<form>
+    <p>
+        <label>Number 1</label>
+        <input type="number" id="txtNumber1">
+    </p>
+    <p>
+        <label>Number 2</label>
+        <input type="number" id="txtNumber2">
+    </p>
+    <p> <input type="button" value="calculate" id="btncalc"></p>
+    <p>
+        <label>Result</label>
+        <input type="number" id="txtResult" readonly>
+    </p>
+</form>
