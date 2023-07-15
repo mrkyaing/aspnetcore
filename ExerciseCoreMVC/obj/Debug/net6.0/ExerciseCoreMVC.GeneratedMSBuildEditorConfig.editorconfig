@@ -9,37 +9,37 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ExerciseCoreMVC
 build_property.RootNamespace = ExerciseCoreMVC
-build_property.ProjectDir = E:\RevisionFundamental\HelloWorld\ExerciseCoreMVC\
+build_property.ProjectDir = C:\Users\DELL\source\repos\aspnetcore\ExerciseCoreMVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\RevisionFundamental\HelloWorld\ExerciseCoreMVC
+build_property.MSBuildProjectDirectory = C:\Users\DELL\source\repos\aspnetcore\ExerciseCoreMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/RevisionFundamental/HelloWorld/ExerciseCoreMVC/Views/Exercise/About.cshtml]
+[C:/Users/DELL/source/repos/aspnetcore/ExerciseCoreMVC/Views/Exercise/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpc2VcQWJvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/RevisionFundamental/HelloWorld/ExerciseCoreMVC/Views/Exercise/Calculate.cshtml]
+[C:/Users/DELL/source/repos/aspnetcore/ExerciseCoreMVC/Views/Exercise/Calculate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpc2VcQ2FsY3VsYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/RevisionFundamental/HelloWorld/ExerciseCoreMVC/Views/Exercise/Home.cshtml]
+[C:/Users/DELL/source/repos/aspnetcore/ExerciseCoreMVC/Views/Exercise/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpc2VcSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/RevisionFundamental/HelloWorld/ExerciseCoreMVC/Views/Exercise/Index.cshtml]
+[C:/Users/DELL/source/repos/aspnetcore/ExerciseCoreMVC/Views/Exercise/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpc2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/RevisionFundamental/HelloWorld/ExerciseCoreMVC/Views/Exercise/Login.cshtml]
+[C:/Users/DELL/source/repos/aspnetcore/ExerciseCoreMVC/Views/Exercise/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpc2VcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/RevisionFundamental/HelloWorld/ExerciseCoreMVC/Views/Exercise/Multiple.cshtml]
+[C:/Users/DELL/source/repos/aspnetcore/ExerciseCoreMVC/Views/Exercise/Multiple.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpc2VcTXVsdGlwbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/RevisionFundamental/HelloWorld/ExerciseCoreMVC/Views/Exercise/Registration.cshtml]
+[C:/Users/DELL/source/repos/aspnetcore/ExerciseCoreMVC/Views/Exercise/Registration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpc2VcUmVnaXN0cmF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

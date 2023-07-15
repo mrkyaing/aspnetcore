@@ -1,0 +1,54 @@
+﻿<form action="/employee/multientry" method="post">
+    <table border="1">
+        <tr>
+            <td>Id 1
+                <input type="text" name="Id" />
+            </td>
+            <td>First Name
+                <input type="text" name="FirstName" />
+            </td>
+            <td>Last Name
+                <input type="text" name="LastName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Id 2
+                <input type="text" name="Id" />
+            </td>
+            <td>
+                First Name
+                <input type="text" name="FirstName" />
+            </td>
+            <td>
+                Last Name
+                <input type="text" name="LastName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Id 3
+                <input type="text" name="Id" />
+            </td>
+            <td>
+                First Name
+                <input type="text" name="FirstName" />
+            </td>
+            <td>
+                Last Name
+                <input type="text" name="LastName" />
+            </td>
+        </tr>
+    <tr>
+        <td>
+            <input type="submit" value="Collect"/>
+        </td>
+    </tr>
+    </table>
+    @if (ViewBag.Records != null) {
+        <h1>Your submitted Ids are :</h1>
+        @foreach (string r in ViewBag.Records) {
+            <b>@r</b>
+        }
+    }
+</form>

@@ -9,17 +9,29 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CurrencyConvertor
 build_property.RootNamespace = CurrencyConvertor
-build_property.ProjectDir = E:\RevisionFundamental\HelloWorld\CurrencyConvertor\
+build_property.ProjectDir = C:\Users\DELL\source\repos\aspnetcore\CurrencyConvertor\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\RevisionFundamental\HelloWorld\CurrencyConvertor
+build_property.MSBuildProjectDirectory = C:\Users\DELL\source\repos\aspnetcore\CurrencyConvertor
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/RevisionFundamental/HelloWorld/CurrencyConvertor/Views/Convertor/ChangeCurrency.cshtml]
+[C:/Users/DELL/source/repos/aspnetcore/CurrencyConvertor/Views/Convertor/ChangeCurrency.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmVydG9yXENoYW5nZUN1cnJlbmN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/RevisionFundamental/HelloWorld/CurrencyConvertor/Views/Home/Index.cshtml]
+[C:/Users/DELL/source/repos/aspnetcore/CurrencyConvertor/Views/Employee/Entry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW50cnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/aspnetcore/CurrencyConvertor/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/aspnetcore/CurrencyConvertor/Views/Employee/MultiEntry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTXVsdGlFbnRyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/aspnetcore/CurrencyConvertor/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

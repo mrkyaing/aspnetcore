@@ -1,0 +1,19 @@
+﻿<form action="/Execrise/FullName" method="get">
+    <p>
+        <label>First Name:</label>
+        <input type="text" name="firstName" required />
+    </p>
+
+    <p>
+        <label>Last Name:</label>
+        <input type="text" name="lastName" required />
+    </p>
+    <p>
+        <label>Full Name:</label>
+        <label style="color:green">@ViewBag.FullName</label>
+    </p>
+    <p>
+        <input type="submit" value="Register" />
+        <input type="reset" value="Cancel" />
+    </p>
+</form>

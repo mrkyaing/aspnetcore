@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<head>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+    </style>
+
+</head>
+<body>
+    <h1>Employee Entry Form</h1>
+
+    <form action="/employee/entry" method="post">
+        <div>
+            <label for="Id">Employee Id:</label>
+            <input type="text" name="Id" required>
+        </div>
+
+        <div>
+            <label for="firstName">First Name :</label>
+            <input type="text" name="FirstName" required>
+        </div>
+
+        <div>
+            <label for="LastName">Last Name:</label>
+            <input type="text" name="LastName" required>
+        </div>
+        <div>
+            <label for="Country"> Country:</label>
+            <input type="text" name="HomeAddress.Country" required>
+        </div>
+        <div>
+            <label for="Street"> Street:</label>
+            <input type="text" name="HomeAddress.Street" required>
+        </div>
+        <div>
+            <label for="PostalCode"> Postal Code:</label>
+            <input type="text" name="HomeAddress.PostalCode" required>
+        </div>
+        <div>
+            <label for="NativeCountry"> Country(Native):</label>
+            <input type="text" name="NativeAddress.Country" required>
+        </div>
+        <div>
+            <label for="NativeBirthPlace"> BirthPlace(Native):</label>
+            <input type="text" name="NativeAddress.BirthPlace" required>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="success-message">@ViewData["FullName"]</div>
+    <div class="success-message">@ViewBag.BirthPlace</div>
+</body>

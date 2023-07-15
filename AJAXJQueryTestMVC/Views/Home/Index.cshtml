@@ -1,0 +1,9 @@
+﻿<b>Welcome Home</b>
+<form action="/Home/TellMeNow" method="get">
+    <button type="submit">Tell me time?</button>
+</form>
+<div>
+    @if (ViewBag.MeNow != null) {
+        @ViewBag.MeNow
+    }
+</div>

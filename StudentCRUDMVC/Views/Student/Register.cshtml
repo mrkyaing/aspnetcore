@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<head>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+        .success-message{
+            color:green;
+            font-size:medium;
+            text-align:center
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Student Entry Form</h1>
+
+    <form action="/student/register" method="post">
+        <div>
+            <label for="Id">Student Id:</label>
+            <input type="text" name="Id" required>
+        </div>
+
+        <div>
+            <label for="firstName"> Name :</label>
+            <input type="text" name="Name" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" name="Email" required>
+        </div>
+        <div>
+            <label for="DOB"> DOB:</label>
+            <input type="date" name="DOB" required>
+        </div>
+        <div>
+            <label for="Gender"> Gender:</label>
+            <input type="radio" name="Gender" value="female" checked> Female
+            <input type="radio" name="Gender" value="male"> Male
+            <input type="radio" name="Gender" value="other"> other
+        </div>
+        <div>
+            <label for="Address">Address:</label>
+            <textarea name="Address"></textarea>
+        </div>
+        <div>
+            <label for="Phone"> Phone:</label>
+            <input type="text" name="phone" required>
+        </div>
+      
+        <input type="submit" value="Register">
+    </form>
+    <div class="success-message">@ViewBag.Msg</div>
+</body>

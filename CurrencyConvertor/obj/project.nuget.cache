@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X4PGrXidxdhVV6K45p/gzQ1NePu0ZLAGsLO1j0mBfMRbvIikMCfSS/CTVttsLnsPHLuYuVQT6WjHG9q87r+H8w==",
+  "dgSpecHash": "7j1Dsi+KwbtIqd75A6a/gJxAGWEeUtczpgvIcQTT/+TEJEz306zZ4HqJ0hrh0EO2YlE0WKiBno1mG4dLhdBZbA==",
   "success": true,
-  "projectFilePath": "E:\\RevisionFundamental\\HelloWorld\\CurrencyConvertor\\CurrencyConvertor.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\CurrencyConvertor\\CurrencyConvertor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

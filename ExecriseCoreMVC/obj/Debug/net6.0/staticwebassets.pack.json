@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\RevisionFundamental\\HelloWorld\\ExecriseCoreMVC\\wwwroot\\DownloadFiles\\nrc.pdf",
+      "PackagePath": "staticwebassets\\DownloadFiles\\nrc.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ExecriseCoreMVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ExecriseCoreMVC.props",
+      "PackagePath": "build\\ExecriseCoreMVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ExecriseCoreMVC.props",
+      "PackagePath": "buildMultiTargeting\\ExecriseCoreMVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ExecriseCoreMVC.props",
+      "PackagePath": "buildTransitive\\ExecriseCoreMVC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

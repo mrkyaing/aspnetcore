@@ -1,0 +1,38 @@
+﻿<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<form>
+    <h1>Making an Order Now</h1>
+    <p>
+       <label>Order Id</label>
+       <input type="text" id="txtOrderId" />
+    </p>
+    <p>
+        <label>Order Quantity</label>
+        <input type="text" id="txtOrderQuantity" />
+    </p>
+    <p>
+        <button id="btnMakeOrderNow">Order Now</button>
+    </p>
+</form>
+<script>
+    $("#btnMakeOrderNow").click(function (evt){
+        evt.preventDefault();
+        var AnOrder={};//create a order object to send the data to the controller 
+        AnOrder.Id = $("#txtOrderId").val();//1 getting the value from the text box
+        AnOrder.Quantity = $("#txtOrderQuantity").val();//30 getting the value from the text box
+        $.ajax({
+            type:"POST",
+            url:"/Order/MakeOrder",
+            data: AnOrder,
+            success:function (response){
+             var data=JSON.stringify(response);
+             alert(data);
+            },
+            failure: function (error) {
+                console.log(error)
+            }
+        });
+
+    });
+</script>

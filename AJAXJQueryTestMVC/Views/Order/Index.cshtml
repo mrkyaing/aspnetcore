@@ -1,0 +1,30 @@
+﻿<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<form>
+    <button id="btnRefresh"> Now</button>
+    <label>Cuurnt Time is </label>
+    <h1 id="now"></h1>
+    <button id="btnsayhi"> say hi</button>
+    <button id="btnsayname" onclick="tellmyname();">cilck me</button>
+</form>
+<script>
+    $(document).ready(function (){
+        $("#btnRefresh").click(function (evt){
+            evt.preventDefault();
+         var url="/Order/TellMeNow";
+         $.get(url,null,function (data){
+                $("#now").html(data);
+         });
+
+        });
+        $("#btnsayhi").click(function (){
+        alert("Hi");
+        });
+    });
+    
+    function tellmyname(){
+        alert("Hello,I am mr Kyaing");
+    }
+
+</script>

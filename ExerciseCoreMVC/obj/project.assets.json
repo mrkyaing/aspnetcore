@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\ExerciseCoreMVC.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\ExerciseCoreMVC\\ExerciseCoreMVC.csproj",
       "projectName": "ExerciseCoreMVC",
-      "projectPath": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\ExerciseCoreMVC.csproj",
+      "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\ExerciseCoreMVC\\ExerciseCoreMVC.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\obj\\",
+      "outputPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\ExerciseCoreMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

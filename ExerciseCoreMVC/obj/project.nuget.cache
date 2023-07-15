@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NiyIZa8XDOsEJ9b5O5B2WIyzmXKLOpiN2hd3JP6FiZoK6ggJ8cavl7irl2Dx4NP+u9vnP7TgmeYjSjeCWiqNnw==",
+  "dgSpecHash": "PgLKRY8VLwUFpUvuMuPvnxEL0NFycTlIL6tD+RLFfKPYKvibny0iGkHhyw4rDSREb1gzbxQaS0A7zwiLdfR9tw==",
   "success": true,
-  "projectFilePath": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\ExerciseCoreMVC.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\ExerciseCoreMVC\\ExerciseCoreMVC.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
