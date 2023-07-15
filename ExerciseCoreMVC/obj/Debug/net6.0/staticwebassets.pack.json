@@ -1,15 +1,15 @@
 {
   "Files": [
     {
-      "Id": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\wwwroot\\DownloadFiles\\gg.pdf",
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\ExerciseCoreMVC\\wwwroot\\DownloadFiles\\gg.pdf",
       "PackagePath": "staticwebassets\\DownloadFiles\\gg.pdf"
     },
     {
-      "Id": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\wwwroot\\DownloadFiles\\gg.txt",
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\ExerciseCoreMVC\\wwwroot\\DownloadFiles\\gg.txt",
       "PackagePath": "staticwebassets\\DownloadFiles\\gg.txt"
     },
     {
-      "Id": "E:\\RevisionFundamental\\HelloWorld\\ExerciseCoreMVC\\wwwroot\\DownloadFiles\\me.txt",
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\ExerciseCoreMVC\\wwwroot\\DownloadFiles\\me.txt",
       "PackagePath": "staticwebassets\\DownloadFiles\\me.txt"
     },
     {
