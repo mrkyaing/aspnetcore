@@ -1,0 +1,45 @@
+﻿<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<div class="container">  
+    <h1>Product Entry</h1>
+    <hr />
+    <div class="text-success">
+        @if (ViewBag.Msg != null) {
+            <b>@ViewBag.Msg</b>
+        }
+    </div>
+    <form action="/product/entry" method="post">
+        <div class="mb-3">
+            <label class="form-label">Code</label>
+            <input class="form-control" type="text" name="Code" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="text" name="Name" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Category</label>
+            <input class="form-control" type="text" name="Category" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">UnitPrice</label>
+            <input class="form-control" type="number" name="UnitPrice" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Today Special</label>
+            <select class="form-control" value="TodaySpecial">
+                 <option value="y">Yes</option>
+                <option value="n">No</option>
+             </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Is Available</label>
+            <select class="form-control" value="IsAvailable">
+                <option value="y">Yes</option>
+                <option value="n">No</option>
+            </select>
+        </div>
+        <input class="btn btn-success" type="submit" value="Entry"> 
+    </form>
+</div>
