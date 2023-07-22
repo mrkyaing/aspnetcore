@@ -4,7 +4,7 @@
         public string Name { get; set; }
         public string Category { get; set; }
         public decimal UnitPrice { get; set; }
-        public bool IsTodaySpecial { get; set; }
-        public bool IsAvailable { get; set; }
+        public string IsTodaySpecial { get; set; }
+        public string IsAvailable { get; set; }
     }
 }

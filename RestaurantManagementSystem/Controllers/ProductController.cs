@@ -21,19 +21,20 @@ namespace RestaurantManagementSystem.Controllers {
         [HttpPost]
         public IActionResult Entry(ProductViewModel productViewModel) {
             try {
+              
                 Product product = new Product()
                 {
                     Id = Guid.NewGuid().ToString(),//for new id when uer create the record 36 char
                     Name = productViewModel.Name,//c101
                     Code = productViewModel.Code,
                     UnitPrice = productViewModel.UnitPrice,
-                    IsAvailable = productViewModel.IsAvailable,
-                    IsTodaySpecial = productViewModel.IsTodaySpecial,
+                    IsAvailable = productViewModel.IsAvailable.Equals("y")?true : false,
+                    IsTodaySpecial = productViewModel.IsTodaySpecial.Equals("y") ? true : false,
                     Category = productViewModel.Category,
                     Ip = GetLocalIp(),
                 };
-                rMSDBContext.Products.Add(product);
-                rMSDBContext.SaveChanges();
+                rMSDBContext.Products.Add(product);//adding the record to the products of db context
+                rMSDBContext.SaveChanges();// actually save to the database 
                 ViewBag.Msg = "1 record is created successfully";
             }catch(Exception ex) {
                 ViewBag.Msg = "Error occur when 1 record is created because of " +ex.Message;
