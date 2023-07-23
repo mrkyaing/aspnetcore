@@ -1,0 +1,42 @@
+﻿@model IList<ProductViewModel>
+    <head>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    </head>
+    <h1>Product Information </h1>
+    <hr />
+@if (TempData["Msg"] != null) {
+    <div class="text-info">
+        <b>@TempData["Msg"] </b>
+    </div>
+}
+<table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Code</th>
+                <th scope="col">Name</th>
+               <th scope="col">UnitPrice (MMK)</th>
+                <th scope="col">Is Availabe</th>
+                <th scope="col">Today Special</th>
+            <th scope="col">Category</th>
+            <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach(var product in Model) {
+            <tr>
+                <th scope="row">@product.SrNo</th>
+                <td>@product.Code</td>
+                <td>@product.Name</td>
+                <td>@product.UnitPrice </td>
+                <td>@product.IsAvailable</td>
+                <td>@product.IsTodaySpecial</td>
+                <td>@product.Category</td>
+                <td>
+                    <a href="/product/edit?Id=@product.Id" class="text-black">edit</a>
+                    <a href="/product/delete?Id=@product.Id" onclick=" return confirm('are you sure to delete this record?');">delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    </table>

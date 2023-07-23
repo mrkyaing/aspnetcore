@@ -1,0 +1,45 @@
+﻿@model ProductViewModel
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<div class="container">
+    <h1>Product Edit</h1>
+    <hr />
+    <form action="/product/Update" method="post">
+        <input type="hidden" name="Id" value="@Model.Id" /> <!--hidden value to update the record -->
+        <div class="mb-3">
+            <label class="form-label">Code</label>
+            <input class="form-control" type="text" name="Code" required value="@Model.Code"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="text" name="Name" required value="@Model.Name"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Category</label>
+            <input class="form-control" type="text" name="Category" required value="@Model.Category"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">UnitPrice</label>
+            <input class="form-control" type="number" name="UnitPrice" required value="@Model.UnitPrice"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Today Special</label>
+         @*   @if (Model.IsTodaySpecial.Equals("y")) {
+                <option value="y">Yes</option>
+            }*@
+            <select class="form-control" name="IsTodaySpecial">
+                <option value="y">Yes</option>
+                <option value="n">No</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Is Available</label>
+            <select class="form-control" name="IsAvailable">
+                <option value="y">Yes</option>
+                <option value="n">No</option>
+            </select>
+        </div>
+        <input class="btn btn-success" type="submit" value="Update">
+    </form>
+</div>
