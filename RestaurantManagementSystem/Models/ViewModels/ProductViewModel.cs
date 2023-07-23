@@ -7,6 +7,5 @@
         public decimal UnitPrice { get; set; }
         public string IsTodaySpecial { get; set; }
         public string IsAvailable { get; set; }
-        public int SrNo { get; set; } = 0;
     }
 }

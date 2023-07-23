@@ -15,11 +15,10 @@ namespace RestaurantManagementSystem.Controllers {
            rMSDBContext = context;
         }
         public IActionResult List() {
-            int i = 0;
+
           IList<ProductViewModel> products = rMSDBContext.Products.Select(x => new ProductViewModel
           //data exchange between View Model and Model >> DTO  
           {
-               SrNo=i,
                 Id = x.Id,
                 Name = x.Name,
                 Code = x.Code,

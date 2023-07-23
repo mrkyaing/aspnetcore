@@ -23,9 +23,12 @@
             </tr>
         </thead>
         <tbody>
+        @{
+            int index = 1;
+        }
         @foreach(var product in Model) {
             <tr>
-                <th scope="row">@product.SrNo</th>
+                <th scope="row">@index</th>
                 <td>@product.Code</td>
                 <td>@product.Name</td>
                 <td>@product.UnitPrice </td>
@@ -37,6 +40,7 @@
                     <a href="/product/delete?Id=@product.Id" onclick=" return confirm('are you sure to delete this record?');">delete</a>
                 </td>
             </tr>
+            index++;
         }
     </tbody>
     </table>
