@@ -36,8 +36,8 @@
                 <td>@product.IsTodaySpecial</td>
                 <td>@product.Category</td>
                 <td>
-                    <a href="/product/edit?Id=@product.Id" class="text-black">edit</a>
-                    <a href="/product/delete?Id=@product.Id" onclick=" return confirm('are you sure to delete this record?');">delete</a>
+                    <a href="/product/edit?Id=@product.Id" class="btn btn-success" role="button">edit</a>
+                    <a href="/product/delete?Id=@product.Id" onclick=" return confirm('are you sure to delete this record?');" class="btn btn-danger" role="button">delete</a>
                 </td>
             </tr>
             index++;

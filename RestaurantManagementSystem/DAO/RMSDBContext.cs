@@ -6,6 +6,7 @@ namespace RestaurantManagementSystem.DAO {
         public RMSDBContext(DbContextOptions<RMSDBContext> options) : base(options) {
         }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductEntity> Products { get; set; }
+        public DbSet<CategoryEntity> Categories { get; set; }
     }
 }

@@ -1,0 +1,23 @@
+﻿<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<div class="container">
+    <h1>Category Entry</h1>
+    <hr />
+    <div class="text-success">
+        @if (ViewBag.Msg != null) {
+            <b>@ViewBag.Msg</b>
+        }
+    </div>
+    <form action="/category/entry" method="post">
+        <div class="mb-3">
+            <label class="form-label">Code</label>
+            <input class="form-control" type="text" name="Code" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="text" name="Name" required />
+        </div>
+        <input class="btn btn-success" type="submit" value="Entry">
+    </form>
+</div>

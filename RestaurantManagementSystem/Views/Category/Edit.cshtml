@@ -1,0 +1,20 @@
+﻿@model CategoryViewModel
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<div class="container">
+    <h1>Category Edit</h1>
+    <hr />
+    <form action="/category/update" method="post">
+        <input type="hidden" name="Id" value="@Model.Id" /> <!--hidden value to update the record -->
+        <div class="mb-3">
+            <label class="form-label">Code</label>
+            <input class="form-control" type="text" name="Code" required value="@Model.Code"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="text" name="Name" required value="@Model.Name"/>
+        </div>
+        <input class="btn btn-success" type="submit" value="Update">
+    </form>
+</div>

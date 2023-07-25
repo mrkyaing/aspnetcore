@@ -5,7 +5,7 @@ namespace RestaurantManagementSystem.Models {
         [Key]
         public string Id { get; set; }
         public DateTime CreatedAt { get; set; }= DateTime.Now;
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public string Ip { get; set; }
     }
 }

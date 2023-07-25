@@ -1,0 +1,38 @@
+﻿@model IList<CategoryViewModel>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<h1>Category Information </h1>
+<hr />
+@if (TempData["Msg"] != null) {
+    <div class="text-info">
+        <b>@TempData["Msg"] </b>
+    </div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Code</th>
+            <th scope="col">Name</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int index = 1;
+        }
+        @foreach (var item in Model) {
+            <tr>
+                <th scope="row">@index</th>
+                <td>@item.Code</td>
+                <td>@item.Name</td>
+                <td>
+                    <a href="/category/edit?Id=@item.Id" class="btn btn-success" role="button">edit</a>
+                    <a href="/category/delete?Id=@item.Id" onclick=" return confirm('are you sure to delete this record?');" class="btn btn-danger" role="button">delete</a>
+                </td>
+            </tr>
+            index++;
+        }
+    </tbody>
+</table>

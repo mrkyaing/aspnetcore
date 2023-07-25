@@ -2,9 +2,8 @@
 using RestaurantManagementSystem.DAO;
 using RestaurantManagementSystem.Models;
 using RestaurantManagementSystem.Models.ViewModels;
-using System.Net.Sockets;
-using System.Net;
 using Microsoft.EntityFrameworkCore;
+using RestaurantManagementSystem.Utilities;
 
 namespace RestaurantManagementSystem.Controllers {
     public class ProductController : Controller {
@@ -35,7 +34,7 @@ namespace RestaurantManagementSystem.Controllers {
         public IActionResult Entry(ProductViewModel productViewModel) {
             try {
                 //DTO >> Data Transfer Object 
-                Product product = new Product(){
+                var product = new ProductEntity(){
                     Id = Guid.NewGuid().ToString(),//for new id when uer create the record 36 char GUID  , UUID 
                     Name = productViewModel.Name,//c101 
                     Code = productViewModel.Code,
@@ -43,7 +42,7 @@ namespace RestaurantManagementSystem.Controllers {
                     IsAvailable = productViewModel.IsAvailable.Equals("y")?true : false,
                     IsTodaySpecial = productViewModel.IsTodaySpecial.Equals("y") ? true : false,
                     Category = productViewModel.Category,
-                    Ip = GetLocalIp(),
+                    Ip = NetworkHelper.GetLocalIp(),
                 };
                 rMSDBContext.Products.Add(product);//adding the record to the products of db context
                 rMSDBContext.SaveChanges();// actually save to the database 
@@ -56,7 +55,7 @@ namespace RestaurantManagementSystem.Controllers {
 
         public IActionResult Delete(string Id) {
             try {
-                Product product = rMSDBContext.Products.Where(x => x.Id.Equals(Id)).SingleOrDefault();
+                var product = rMSDBContext.Products.Where(x => x.Id.Equals(Id)).SingleOrDefault();
                 if (product == null) {
                     TempData["Msg"] = "There is no recrod that you select.";
                 }
@@ -89,7 +88,7 @@ namespace RestaurantManagementSystem.Controllers {
         public IActionResult Update(ProductViewModel productViewModel) {
             try {
                 //DTO >> Data Transfer Object 
-                Product product = new Product()
+                var product = new ProductEntity()
                 {
                     Id =productViewModel.Id,//not to generate new id because this is update processs 
                     Name = productViewModel.Name,//c101
@@ -99,7 +98,7 @@ namespace RestaurantManagementSystem.Controllers {
                     IsTodaySpecial = productViewModel.IsTodaySpecial.Equals("y") ? true : false,
                     Category = productViewModel.Category,
                     UpdatedAt=DateTime.Now,
-                    Ip = GetLocalIp(),
+                    Ip =NetworkHelper.GetLocalIp()
                 };
                 rMSDBContext.Entry(product).State=EntityState.Modified;//editing the record to the products of db context
                 rMSDBContext.SaveChanges();// actually update to the database 
@@ -110,14 +109,6 @@ namespace RestaurantManagementSystem.Controllers {
             }
             return RedirectToAction("List");
         }
-        public string GetLocalIp() {
-            var host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (var ip in host.AddressList) {
-                if (ip.AddressFamily == AddressFamily.InterNetwork) {
-                    return ip.ToString();
-                }
-            }
-            throw new Exception("No network adapters with an IPv4 address in the system!");
-        }
+          
     }
 }
