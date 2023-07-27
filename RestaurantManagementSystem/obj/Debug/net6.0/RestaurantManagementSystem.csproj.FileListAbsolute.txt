@@ -66,3 +66,5 @@ C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\obj\Debug\net6.
 C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\obj\Debug\net6.0\RestaurantManagementSystem.pdb
 C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\obj\Debug\net6.0\RestaurantManagementSystem.genruntimeconfig.cache
 C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\obj\Debug\net6.0\ref\RestaurantManagementSystem.dll
+C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -8,5 +8,10 @@ namespace RestaurantManagementSystem.DAO {
 
         public DbSet<ProductEntity> Products { get; set; }
         public DbSet<CategoryEntity> Categories { get; set; }
+        public DbSet<EmployeeEntity> Employees { get; set; }
+        public DbSet<TableEntity>   Tables { get; set; }
+        public DbSet<OrderEntity> Orders { get; set; }
+        public DbSet<OrderDetailEntity> OrderDetails { get; set; }
+        public DbSet<InvoiceEntity> Invoices { get; set; }
     }
 }

@@ -1,0 +1,68 @@
+﻿<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<div class="container">
+    <h1>Employee Entry</h1>
+    <hr />
+    <div class="text-success">
+        @if (ViewBag.Msg != null) {
+            <b>@ViewBag.Msg</b>
+        }
+    </div>
+    <form action="/employee/entry" method="post">
+        <div class="mb-3">
+            <label class="form-label">Code</label>
+            <input class="form-control" type="text" name="Code" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="text" name="Name" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input class="form-control" type="text" name="Email" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Salary</label>
+            <input class="form-control" type="number" name="Salary" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-control" name="Gender">
+                <option value="female">female</option>
+                <option value="male">male</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mobile Phone</label>
+            <input class="form-control" type="text" name="MobilePhone" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">DOB</label>
+            <input class="form-control" type="date" name="DOB" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">JoinedDate</label>
+            <input class="form-control" type="date" name="JoinedDate" required />
+        </div>
+      
+        <div class="mb-3">
+            <label class="form-label">NRC</label>
+            <input class="form-control" type="text" name="NRC" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Position</label>
+            <select class="form-control" name="Position">
+                <option value="Waiter">Waiter</option>
+                <option value="Cashier">Cashier</option>
+                <option value="Cooker">Cooker</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Address</label>
+            <textarea name="Address" class="form-control"></textarea>
+        </div>
+        <input class="btn btn-success" type="submit" value="Entry">
+    </form>
+</div>
