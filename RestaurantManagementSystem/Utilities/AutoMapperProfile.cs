@@ -7,6 +7,8 @@ namespace RestaurantManagementSystem.Utilities {
         public AutoMapperProfile()
         {
             CreateMap<EmployeeEntity, EmployeeViewModel>().ReverseMap();
+            CreateMap<OrderEntity, OrderViewModel>().ReverseMap();
+            CreateMap<OrderDetailEntity, OrderDetailViewModel>().ReverseMap();
         }
     }
 }
