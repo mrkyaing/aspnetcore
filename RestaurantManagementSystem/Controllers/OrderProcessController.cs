@@ -16,32 +16,35 @@ namespace RestaurantManagementSystem.Controllers {
             _mapper = mapper;
         }
         public IActionResult List() {
-            var viewModels = _mapper.Map<List<OrderDetailViewModel>>(rMSDBContext.OrderDetails.OrderBy(o => o.CreatedAt).ToList());
+            ViewBag.Products=_mapper.Map<List<ProductViewModel>>(rMSDBContext.Products.ToList());
+            var viewModels = _mapper.Map<List<OrderViewModel>>(rMSDBContext.Orders.OrderBy(o => o.CreatedAt).ToList());
             return View(viewModels); 
         }
         public IActionResult Entry() => View();
         [HttpPost]
-        public IActionResult Entry(OrderViewModel order,List<OrderDetailViewModel> orderDetails) {
+        public JsonResult Entry(OrderViewModel anOrder) {
             try {
-                //DTO >> Data Transfer Object 
-                var entity = _mapper.Map<OrderEntity>(order);
-                entity.Id = Guid.NewGuid().ToString();//for new id when uer create the record 36 char GUID  , UUID 
-                entity.Ip = NetworkHelper.GetLocalIp();
-                rMSDBContext.Orders.Add(entity);//adding the record to the products of db context
-                rMSDBContext.SaveChanges();// actually save to the database 
-                foreach (var detail in orderDetails) {
-                    detail.Id = Guid.NewGuid().ToString();
-                    detail.OrderId = entity.Id;
+                if (ModelState.IsValid) {
+                    //DTO >> Data Transfer Object 
+                    var entity = _mapper.Map<OrderEntity>(anOrder);
+                    entity.Id = Guid.NewGuid().ToString();//for new id when uer create the record 36 char GUID  , UUID 
+                    //entity.Ip = NetworkHelper.GetLocalIp();
+                    rMSDBContext.Orders.Add(entity);//adding the record to the products of db context
+                    rMSDBContext.SaveChanges();// actually save to the database 
+                    foreach (var detail in anOrder.orderDetails) {
+                        detail.Id = Guid.NewGuid().ToString();
+                        detail.OrderId = entity.Id;
+                    }
+                    var detailEntity = _mapper.Map<List<OrderDetailEntity>>(anOrder.orderDetails);
+                    rMSDBContext.OrderDetails.AddRange(detailEntity);//adding the record to the products of db context
+                    rMSDBContext.SaveChanges();// actually save to the database 
+                    ViewBag.Msg = "1 record is created successfully"; 
                 }
-                var detailEntity = _mapper.Map<List<OrderDetailEntity>>(order);
-                rMSDBContext.OrderDetails.AddRange(detailEntity);//adding the record to the products of db context
-                rMSDBContext.SaveChanges();// actually save to the database 
-                ViewBag.Msg = "1 record is created successfully";
             }
             catch (Exception ex) {
                 ViewBag.Msg = "Error occur when record is created because of " + ex.Message;
             }
-            return View();
+            return Json(anOrder);
         }
         public IActionResult Delete(string Id) {
             try {

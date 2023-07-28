@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KY8a/kredkBnYfnqLukqDhOwaObNi0bp4XUFuMrYKdo=",
+  "Hash": "CTsVG02E7kbmVW83LhFUi2lLvbgPqO23L82ut7CVAW8=",
   "Source": "RestaurantManagementSystem",
   "BasePath": "_content/RestaurantManagementSystem",
   "Mode": "Default",
@@ -865,6 +865,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\lib\\datatables.net\\jquery.dataTables.js",
+      "SourceId": "RestaurantManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\",
+      "BasePath": "_content/RestaurantManagementSystem",
+      "RelativePath": "lib/datatables.net/jquery.dataTables.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\datatables.net\\jquery.dataTables.js"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\lib\\datatables.net\\jquery.dataTables.min.js",
+      "SourceId": "RestaurantManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\",
+      "BasePath": "_content/RestaurantManagementSystem",
+      "RelativePath": "lib/datatables.net/jquery.dataTables.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\datatables.net\\jquery.dataTables.min.js"
     },
     {
       "Identity": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\lib\\jquery\\dist\\jquery.js",

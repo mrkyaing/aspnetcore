@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using RestaurantManagementSystem.Utilities;
+using System.ComponentModel.DataAnnotations;
 
 namespace RestaurantManagementSystem.Models {
     public class BaseEntity {
@@ -6,6 +7,6 @@ namespace RestaurantManagementSystem.Models {
         public string Id { get; set; }
         public DateTime CreatedAt { get; set; }= DateTime.Now;
         public DateTime? UpdatedAt { get; set; }
-        public string Ip { get; set; }
+        public string Ip { get; set; } = NetworkHelper.GetLocalIp();
     }
 }

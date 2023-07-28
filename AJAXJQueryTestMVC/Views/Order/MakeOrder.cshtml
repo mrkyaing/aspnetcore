@@ -18,6 +18,7 @@
 <script>
     $("#btnMakeOrderNow").click(function (evt){
         evt.preventDefault();
+        debugger
         var AnOrder={};//create a order object to send the data to the controller 
         AnOrder.Id = $("#txtOrderId").val();//1 getting the value from the text box
         AnOrder.Quantity = $("#txtOrderQuantity").val();//30 getting the value from the text box

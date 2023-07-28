@@ -9,6 +9,7 @@ namespace RestaurantManagementSystem.Utilities {
             CreateMap<EmployeeEntity, EmployeeViewModel>().ReverseMap();
             CreateMap<OrderEntity, OrderViewModel>().ReverseMap();
             CreateMap<OrderDetailEntity, OrderDetailViewModel>().ReverseMap();
+            CreateMap<ProductEntity, ProductViewModel>().ReverseMap();
         }
     }
 }
