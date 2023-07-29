@@ -17,7 +17,11 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Category</label>
-            <input class="form-control" type="text" name="Category" required value="@Model.Category"/>
+            <select class="form-control" name="CategoryId">
+                @foreach (var c in ViewBag.Categories) {
+                    <option value="@c.Id">@c.Name</option>
+                }
+            </select>
         </div>
         <div class="mb-3">
             <label class="form-label">UnitPrice</label>

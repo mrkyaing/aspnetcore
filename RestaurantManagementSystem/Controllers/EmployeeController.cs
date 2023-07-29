@@ -19,8 +19,11 @@ namespace RestaurantManagementSystem.Controllers {
             var viewModels = _mapper.Map<List<EmployeeViewModel>>(rMSDBContext.Employees.OrderBy(o => o.Code).ToList());
             return View(viewModels); 
         }
-        public IActionResult Entry() => View();
-        [HttpPost]
+        public IActionResult Entry() {
+            ViewBag.Positions= rMSDBContext.Positions.ToList();
+            return  View();
+        }
+            [HttpPost]
         public IActionResult Entry(EmployeeViewModel viewModel) {
             try {
                 //DTO >> Data Transfer Object 
@@ -30,20 +33,20 @@ namespace RestaurantManagementSystem.Controllers {
                 entity.ProfileImageUrl = "c:\\ok.jpeg";
                 rMSDBContext.Employees.Add(entity);//adding the record to the products of db context
                 rMSDBContext.SaveChanges();// actually save to the database 
-                ViewBag.Msg = "1 record is created successfully";
+                TempData["Msg"] = "1 record is created successfully";
             }
             catch (Exception ex) {
-                ViewBag.Msg = "Error occur when record is created because of " + ex.Message;
+                TempData["Msg"] = "Error occur when record is created because of " + ex.Message;
             }
-            return View();
+            return RedirectToAction("List");
         }
         public IActionResult Delete(string Id) {
             try {
-                var entity = rMSDBContext.Categories.Where(x => x.Id.Equals(Id)).SingleOrDefault();
+                var entity = rMSDBContext.Employees.Where(x => x.Id.Equals(Id)).SingleOrDefault();
                 if (entity == null) {
                     TempData["Msg"] = "There is no recrod that you select.";
                 }
-                rMSDBContext.Categories.Remove(entity);// collect the data to remove
+                rMSDBContext.Employees.Remove(entity);// collect the data to remove
                 rMSDBContext.SaveChanges();// remove the record from the database 
                 TempData["Msg"] = "delete process is completed successfully.";
             }
@@ -55,7 +58,7 @@ namespace RestaurantManagementSystem.Controllers {
         }
 
         public IActionResult Edit(string Id) {
-            var viewModel = rMSDBContext.Categories.Where(x => x.Id.Equals(Id)).Select(x => new CategoryViewModel
+            var viewModel = rMSDBContext.Employees.Where(x => x.Id.Equals(Id)).Select(x => new EmployeeViewModel
             {
                 Id = x.Id,
                 Name = x.Name,
@@ -65,7 +68,7 @@ namespace RestaurantManagementSystem.Controllers {
             return View(viewModel);
         }
         [HttpPost]
-        public IActionResult Update(CategoryViewModel viewModel) {
+        public IActionResult Update(EmployeeViewModel viewModel) {
             try {
                 //DTO >> Data Transfer Object 
                 var entity = new CategoryEntity()

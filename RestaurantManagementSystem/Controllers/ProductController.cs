@@ -14,7 +14,6 @@ namespace RestaurantManagementSystem.Controllers {
            rMSDBContext = context;
         }
         public IActionResult List() {
-
           IList<ProductViewModel> products = rMSDBContext.Products.Select(x => new ProductViewModel
           //data exchange between View Model and Model >> DTO  
           {
@@ -29,7 +28,10 @@ namespace RestaurantManagementSystem.Controllers {
             return View(products);
         }
 
-        public IActionResult Entry()=>View();
+        public IActionResult Entry() {
+            ViewBag.Categories=rMSDBContext.Categories.ToList();
+            return View();
+        }
         [HttpPost]
         public IActionResult Entry(ProductViewModel productViewModel) {
             try {
@@ -41,16 +43,16 @@ namespace RestaurantManagementSystem.Controllers {
                     UnitPrice = productViewModel.UnitPrice,
                     IsAvailable = productViewModel.IsAvailable.Equals("y")?true : false,
                     IsTodaySpecial = productViewModel.IsTodaySpecial.Equals("y") ? true : false,
-                    Category = productViewModel.Category,
+                    CategoryId = productViewModel.CategoryId,
                     Ip = NetworkHelper.GetLocalIp(),
                 };
                 rMSDBContext.Products.Add(product);//adding the record to the products of db context
                 rMSDBContext.SaveChanges();// actually save to the database 
-                ViewBag.Msg = "1 record is created successfully";
+                TempData["Msg"] = "1 record is created successfully";
             }catch(Exception ex) {
-                ViewBag.Msg = "Error occur when 1 record is created because of " +ex.Message;
+                TempData["Msg"] = "Error occur when 1 record is created because of " +ex.Message;
             }
-            return View();
+            return RedirectToAction("List");
         }
 
         public IActionResult Delete(string Id) {
@@ -67,7 +69,6 @@ namespace RestaurantManagementSystem.Controllers {
                 TempData["Msg"] = "error occur when record is deleted.";
             }
             return RedirectToAction("List");
-
         }
 
         public IActionResult Edit(string Id) {
@@ -81,7 +82,7 @@ namespace RestaurantManagementSystem.Controllers {
                 IsAvailable = x.IsAvailable == true ? "y" : "n",
                 IsTodaySpecial = x.IsTodaySpecial == true ? "y" : "n"
             }).SingleOrDefault();
-
+            ViewBag.Categories = rMSDBContext.Categories.ToList();
             return View(productViewModel);
         }
         [HttpPost]
@@ -96,7 +97,7 @@ namespace RestaurantManagementSystem.Controllers {
                     UnitPrice = productViewModel.UnitPrice,
                     IsAvailable = productViewModel.IsAvailable.Equals("y") ? true : false,
                     IsTodaySpecial = productViewModel.IsTodaySpecial.Equals("y") ? true : false,
-                    Category = productViewModel.Category,
+                    CategoryId = productViewModel.CategoryId,
                     UpdatedAt=DateTime.Now,
                     Ip =NetworkHelper.GetLocalIp()
                 };

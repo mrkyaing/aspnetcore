@@ -22,10 +22,7 @@
             <label class="form-label">Email</label>
             <input class="form-control" type="text" name="Email" required />
         </div>
-        <div class="mb-3">
-            <label class="form-label">Salary</label>
-            <input class="form-control" type="number" name="Salary" required />
-        </div>
+      
         <div class="mb-3">
             <label class="form-label">Gender</label>
             <select class="form-control" name="Gender">
@@ -53,10 +50,10 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Position</label>
-            <select class="form-control" name="Position">
-                <option value="Waiter">Waiter</option>
-                <option value="Cashier">Cashier</option>
-                <option value="Cooker">Cooker</option>
+            <select class="form-control" name="PositionId">
+                @foreach (var c in ViewBag.Positions) {
+                    <option value="@c.Id">@c.Name</option>
+                }
             </select>
         </div>
         <div class="mb-3">
