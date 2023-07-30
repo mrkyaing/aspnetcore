@@ -16,7 +16,20 @@ namespace RestaurantManagementSystem.Controllers {
             _mapper = mapper;
         }
         public IActionResult List() {
-            var viewModels = _mapper.Map<List<EmployeeViewModel>>(rMSDBContext.Employees.OrderBy(o => o.Code).ToList());
+            var data = rMSDBContext.Employees.ToList();
+            IList< EmployeeViewModel> viewModels =rMSDBContext.Employees.Select(x=>new EmployeeViewModel
+            {
+                Id=x.Id,
+                Name=x.Name,
+                Position=x.Position,// getting the employee's postion object 
+                Email=x.Email,
+                MobilePhone=x.MobilePhone,
+                NRC=x.NRC,
+                Gender=x.Gender,
+                JoinedDate=x.JoinedDate,
+                DOB=x.DOB,
+                Address=x.Address,
+            }).OrderBy(o=>o.Code).ToList();
             return View(viewModels); 
         }
         public IActionResult Entry() {
@@ -26,6 +39,7 @@ namespace RestaurantManagementSystem.Controllers {
             [HttpPost]
         public IActionResult Entry(EmployeeViewModel viewModel) {
             try {
+              
                 //DTO >> Data Transfer Object 
                 var entity = _mapper.Map<EmployeeEntity>(viewModel);
                 entity.Id = Guid.NewGuid().ToString();//for new id when uer create the record 36 char GUID  , UUID 

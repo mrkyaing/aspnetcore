@@ -1,5 +1,6 @@
 ﻿<head>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <div class="container">
     <h1>Employee Entry</h1>
@@ -37,7 +38,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label">DOB</label>
-            <input class="form-control" type="date" name="DOB" required />
+            <input class="form-control" type="date" id="dtpDOB" name="DOB" required />
         </div>
         <div class="mb-3">
             <label class="form-label">JoinedDate</label>
@@ -63,3 +64,13 @@
         <input class="btn btn-success" type="submit" value="Entry">
     </form>
 </div>
+<script>
+    $("#dtpDOB").on("change",function(){
+        var now=new Date();//2023-07-30-12:43
+        var dob=new Date($("#dtpDOB").val());//1998-01-02
+        var age=now.getFullYear()-dob.getFullYear();
+        if(age<18){
+            alert("Your are not over 18 years")
+        }
+    });
+</script>
