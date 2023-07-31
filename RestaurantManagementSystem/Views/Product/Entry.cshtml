@@ -4,11 +4,6 @@
 <div class="container">  
     <h1>Product Entry</h1>
     <hr />
-    <div class="text-success">
-        @if (ViewBag.Msg != null) {
-            <b>@ViewBag.Msg</b>
-        }
-    </div>
     <form action="/product/entry" method="post">
         <div class="mb-3">
             <label class="form-label">Code</label>
@@ -20,7 +15,11 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Category</label>
-            <input class="form-control" type="text" name="Category" required />
+            <select class="form-control" name="CategoryId">
+                @foreach (var c in ViewBag.Categories) {
+                 <option value="@c.Id">@c.Name</option>
+                }
+            </select>
         </div>
         <div class="mb-3">
             <label class="form-label">UnitPrice</label>

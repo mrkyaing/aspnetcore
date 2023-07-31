@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "A8hf2HXH7hzkE1yNK5ddUnn3B2ibtyBs0feDp9XV/fQUVD5BvKRNGGRfjVFj1332Wn72pNVWBASAXJEbV1PvCA==",
+  "dgSpecHash": "6MPHMRm1C8kAMhGpEAx6qm8VdMbGbPNYdxZuk9z6VscmGGF+zSpAzci5+xjC9A6npRTpNLLzzuchr29Mhgvxpw==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.20\\microsoft.entityframeworkcore.6.0.20.nupkg.sha512",

@@ -197,6 +197,14 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\lib\\datatables.net\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\lib\\datatables.net\\jquery.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\lib\\datatables.net\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables.net\\jquery.dataTables.min.js"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },

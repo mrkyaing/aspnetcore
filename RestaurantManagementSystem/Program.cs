@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.DAO;
+using RestaurantManagementSystem.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllersWithViews();
 var config = builder.Configuration;//create the config object 
 builder.Services.AddDbContext<RMSDBContext>(o =>
