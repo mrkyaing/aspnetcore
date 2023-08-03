@@ -34,7 +34,7 @@
                 <td>@item.Email </td>
                 <td>@item.MobilePhone</td>
                 <td>@item.Gender</td>
-                <td>@item.Position??.Name</td>
+                <td>@item.Position.Name</td>
                 <td>
                     <a href="/employee/edit?Id=@item.Id" class="btn btn-success" role="button">edit</a>
                     <a href="/employee/delete?Id=@item.Id" onclick=" return confirm('are you sure to delete this record?');" class="btn btn-danger" role="button">delete</a>

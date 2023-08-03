@@ -16,20 +16,20 @@ namespace RestaurantManagementSystem.Controllers {
             _mapper = mapper;
         }
         public IActionResult List() {
-            var data = rMSDBContext.Employees.ToList();
-            IList< EmployeeViewModel> viewModels =rMSDBContext.Employees.Select(x=>new EmployeeViewModel
+            IList<EmployeeViewModel> viewModels = rMSDBContext.Employees.Select(x => new EmployeeViewModel
             {
-                Id=x.Id,
-                Name=x.Name,
-                Position=x.Position,// getting the employee's postion object 
-                Email=x.Email,
-                MobilePhone=x.MobilePhone,
-                NRC=x.NRC,
-                Gender=x.Gender,
-                JoinedDate=x.JoinedDate,
-                DOB=x.DOB,
-                Address=x.Address,
-            }).OrderBy(o=>o.Code).ToList();
+                Id = x.Id,
+                Name = x.Name,
+                Code=x.Code,
+                Position = x.Position,// getting the employee's postion object 
+                Email = x.Email,
+                MobilePhone = x.MobilePhone,
+                NRC = x.NRC,
+                Gender = x.Gender,
+                JoinedDate = x.JoinedDate,
+                DOB = x.DOB,
+                Address = x.Address,
+            }).OrderBy(o => o.Code).ToList();
             return View(viewModels); 
         }
         public IActionResult Entry() {
@@ -77,21 +77,26 @@ namespace RestaurantManagementSystem.Controllers {
                 Id = x.Id,
                 Name = x.Name,
                 Code = x.Code,
+                PositionId= x.PositionId,
+                Email = x.Email,
+                MobilePhone = x.MobilePhone,
+                NRC = x.NRC,
+                Gender = x.Gender,
+                JoinedDate = x.JoinedDate,
+                DOB = x.DOB,
+                Address = x.Address,
             }).SingleOrDefault();
-
+            ViewBag.Positions = rMSDBContext.Positions.ToList();
             return View(viewModel);
         }
         [HttpPost]
         public IActionResult Update(EmployeeViewModel viewModel) {
             try {
                 //DTO >> Data Transfer Object 
-                var entity = new CategoryEntity()
-                {
-                    Id = viewModel.Id,//not to generate new id because this is update processs 
-                    Name = viewModel.Name,//c101
-                    Code = viewModel.Code,
-                    Ip = NetworkHelper.GetLocalIp()
-                };
+                var entity = _mapper.Map<EmployeeEntity>(viewModel);
+                entity.Ip = NetworkHelper.GetLocalIp();
+                entity.UpdatedAt = DateTime.Now;
+                entity.ProfileImageUrl = "c:\\ok.jpeg";
                 rMSDBContext.Entry(entity).State = EntityState.Modified;//editing the record to the products of db context
                 rMSDBContext.SaveChanges();// actually update to the database 
                 TempData["Msg"] = "update process is completed successfully.";
