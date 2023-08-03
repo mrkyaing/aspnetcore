@@ -6,6 +6,17 @@
       "provider": "cdnjs",
       "library": "datatables.net@2.1.1",
       "destination": "wwwroot/lib/datatables.net/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "datatables@1.10.21",
+      "destination": "wwwroot/lib/datatables/"
     }
-  ]
+  ,
+{
+  "provider": "cdnjs",
+  "library": "jquery@3.7.0",
+  "destination": "wwwroot/lib/jquery/"
+}
+]
 }
