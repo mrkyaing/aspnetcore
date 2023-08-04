@@ -16,6 +16,7 @@
             <th scope="col">No</th>
             <th scope="col">Is Available </th>
             <th scope="col">Available Capacity Persons</th>
+            <th scope="col">Status </th>
             <th scope="col">Actions</th>
         </tr>
     </thead>
@@ -29,6 +30,7 @@
                 <td>@item.No</td>
                 <td>@item.IsAvailable</td>
                 <td>@item.AvailableCapacityPerson</td>
+                <td>@item.Status</td>
                 <td>
                     <a href="/table/edit?Id=@item.Id" class="btn btn-success" role="button">edit</a>
                     <a href="/table/delete?Id=@item.Id" onclick=" return confirm('are you sure to delete this record?');" class="btn btn-danger" role="button">delete</a>

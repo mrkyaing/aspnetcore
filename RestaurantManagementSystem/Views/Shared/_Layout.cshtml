@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RestaurantManagementSystem.styles.css" asp-append-version="true" />
-        <script src="~/lib/jquery/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -62,6 +61,14 @@
                                 <a class="dropdown-item" href="/employee/list">List</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/employee/entry">Entry</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Order</a>
+                            <div class="dropdown-menu dropdown-menu-dark">
+                                <a class="dropdown-item" href="/orderprocess/list">List</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/orderprocess/entry">Entry</a>
                             </div>
                         </li>
                     </ul>
