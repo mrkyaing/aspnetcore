@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "smo0rMMLm+gqTuMa5nz5LNGkKfOeOio7/FYAx/MKRDg=",
+  "Hash": "aIKN/lF2TYpXrwH2G1A8S044YZv2RyjtTCnuuk5u6/c=",
   "Source": "RestaurantManagementSystem",
   "BasePath": "_content/RestaurantManagementSystem",
   "Mode": "Default",
@@ -1902,6 +1902,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\ReportFiles\\EmployeeReport.rdlc",
+      "SourceId": "RestaurantManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\",
+      "BasePath": "_content/RestaurantManagementSystem",
+      "RelativePath": "ReportFiles/EmployeeReport.rdlc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ReportFiles\\EmployeeReport.rdlc"
     }
   ]
 }

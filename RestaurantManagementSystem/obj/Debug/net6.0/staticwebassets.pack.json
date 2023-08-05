@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\RestaurantManagementSystem.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\ReportFiles\\EmployeeReport.rdlc",
+      "PackagePath": "staticwebassets\\ReportFiles\\EmployeeReport.rdlc"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

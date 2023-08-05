@@ -1,0 +1,30 @@
+﻿<div class="container">
+    <h1>Employee Detail Report</h1>
+    <hr />
+    <div class="text-success">
+        @if (ViewBag.Msg != null) {
+            <b>@ViewBag.Msg</b>
+        }
+    </div>
+    <form action="/employee/EmployeeDetailReport" method="post">
+       
+        <div class="mb-3">
+            <label class="form-label">From Code</label>
+            <select class="form-control" name="FromCode">
+                @foreach (var e in ViewBag.FromCode) {
+                    <option value="@e.Code">@e.Code</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">To Code</label>
+            <select class="form-control" name="ToCode">
+                @foreach (var e in ViewBag.ToCode) {
+                    <option value="@e.Code">@e.Code</option>
+                }
+            </select>
+        </div>
+        <input class="btn btn-success" type="submit" value="Show">
+        <input class="btn btn-success" type="reset" value="Cancel">
+    </form>
+</div>
