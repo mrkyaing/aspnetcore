@@ -12,10 +12,10 @@ namespace RestaurantManagementSystem.Utilities {
             CreateMap<PositionEntity, PositionViewModel>().ReverseMap();
             CreateMap<EmployeeEntity, EmployeeViewModel>().ReverseMap();
             
-            CreateMap<TableEntity, TableViewModel>().ReverseMap();
+            CreateMap<TableEntity, TableViewModel>()
+                .ForMember(dest=>dest.IsAvailable,opt=>opt.MapFrom(src => Convert.ToBoolean(src.IsAvailable))).ReverseMap();
             CreateMap<OrderEntity, OrderViewModel>().ReverseMap();
             CreateMap<OrderDetailEntity, OrderDetailViewModel>().ReverseMap();
-          
         }
     }
 }

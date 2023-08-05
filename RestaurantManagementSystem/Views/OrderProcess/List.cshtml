@@ -96,10 +96,10 @@
                         Table
                     </label>
                     <div class="col-md-4">
-                        <select id="txtTableNo" class="form-control">
-                            <option value="t1">t1</option>
-                            <option value="t2">t2</option>
-                            <option value="t3">t3</option>
+                        <select class="form-control" id="txttableId">
+                            @foreach (var p in ViewBag.Tables) {
+                                <option value="@p.Id">@p.No</option>
+                            }
                         </select>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                     </tfoot>
                 </table>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="closemodal">Close</button>
                 <button id="saveOrder" type="button" class="btn btn-primary">Make an Order</button>
             </div>
             </div>
@@ -148,7 +148,6 @@
                 <h4 class="modal-title">Order Details</h4>
             </div>
             <div class="modal-body">
-
                 <div class="form-horizontal">
                     <div class="form-group">
                         <input type="hidden" id="detailId" />
@@ -256,6 +255,7 @@
             var productItem = '<tr><td>' + productId + '</td><td>' + UnitPrice + '</td><td>' + quantity + '</td><td>' + (parseFloat(UnitPrice) * parseInt(quantity)) + '</td><td>' + remark + '</td><td>' + '</td><td><a data-itemId="0" href="#" class="deleteItem">Remove</a></td></tr>';
                 detailsTableBody.append(productItem);
                 clearItem();
+            $('#orderDetailsModal').modal('hide');
             });
 
             function clearItem() {
@@ -332,12 +332,16 @@
             AnOrder.No = $("#txtOrderNo").val();//1 getting the value from the text box
             AnOrder.IsParcel = $("#txtIsPercel").val();//30 getting the value from the text box
             AnOrder.Status = $("#txtStatus").val();//1 getting the value from the text box
-            AnOrder.TableId = $("#txtTableNo").val();//30 getting the value from the text box
-            AnOrder.EmployeeId = $("#txtTableNo").val();//1 getting the value from the text box
+            AnOrder.TableId = $("#txttableId").val();//30 getting the value from the text box
+            AnOrder.EmployeeId = $("#txttableId").val();//1 getting the value from the text box
             AnOrder.orderDetails = orderDetails
 
             $.when(saveOrder(AnOrder)).then(function (response) {
                     console.log(response);
+                    alert("success");
+                    if(response.equals("success")){
+                    window.location.href = "/orderprocess/list";
+                    }
                 }).fail(function (err) {
                     console.log(err);
                 });
@@ -387,5 +391,8 @@
                 });
             });
         });
+    $('#closemodal').click(function () {
+        $('#newOrderModal').modal('hide');
+    });
     </script>
 

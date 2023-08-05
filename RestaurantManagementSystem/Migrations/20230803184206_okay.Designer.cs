@@ -12,8 +12,8 @@ using RestaurantManagementSystem.DAO;
 namespace RestaurantManagementSystem.Migrations
 {
     [DbContext(typeof(RMSDBContext))]
-    [Migration("20230730055352_intial")]
-    partial class intial
+    [Migration("20230803184206_okay")]
+    partial class okay
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

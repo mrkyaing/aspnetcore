@@ -28,7 +28,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj": {
+                "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -68,6 +72,26 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.20, )"
+            },
+            "ReportViewerCore.NETCore": {
+              "target": "Package",
+              "version": "[15.1.17, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[4.8.5, )"
             }
           },
           "imports": [
@@ -91,6 +115,21 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj",
+        "projectName": "RMSReportHelpers",
+        "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
       }
     }
   }

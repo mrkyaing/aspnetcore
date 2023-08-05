@@ -1,0 +1,78 @@
+﻿@model EmployeeViewModel
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<div class="container">
+    <h1>Employee Entry</h1>
+    <hr />
+    <div class="text-success">
+        @if (ViewBag.Msg != null) {
+            <b>@ViewBag.Msg</b>
+        }
+    </div>
+    <form action="/employee/update" method="post">
+        <input type="hidden" name="Id" value=@Model.Id/>
+        <div class="mb-3">
+            <label class="form-label">Code</label>
+            <input class="form-control" type="text" name="Code" required value=@Model.Code />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="text" name="Name" required value=@Model.Name />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input class="form-control" type="text" name="Email" required value=@Model.Email />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-control" name="Gender">
+                <option value="female">female</option>
+                <option value="male">male</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mobile Phone</label>
+            <input class="form-control" type="text" name="MobilePhone" required value=@Model.MobilePhone />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">DOB</label>
+            <input class="form-control" type="date" id="dtpDOB" name="DOB" required value=@Model.DOB?.ToString("yyyy-MM-dd") />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">JoinedDate</label>
+            <input class="form-control" type="date" name="JoinedDate" required value=@Model.JoinedDate.ToString("yyyy-MM-dd") />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">NRC</label>
+            <input class="form-control" type="text" name="NRC" required value=@Model.NRC />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Position</label>
+            <select class="form-control" name="PositionId">
+                @foreach (var c in ViewBag.Positions) {
+                    <option value="@c.Id">@c.Name</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Address</label>
+            <textarea name="Address" class="form-control">@Model.Address</textarea>
+        </div>
+        <input class="btn btn-success" type="submit" value="Update">
+    </form>
+</div>
+<script>
+    $("#dtpDOB").on("change", function () {
+        var now = new Date();//2023-07-30-12:43
+        var dob = new Date($("#dtpDOB").val());//1998-01-02
+        var age = now.getFullYear() - dob.getFullYear();
+        if (age < 18) {
+            alert("Your are not over 18 years")
+        }
+    });
+</script>

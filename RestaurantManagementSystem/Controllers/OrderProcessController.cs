@@ -17,10 +17,12 @@ namespace RestaurantManagementSystem.Controllers {
         }
         public IActionResult List() {
             ViewBag.Products=_mapper.Map<List<ProductViewModel>>(rMSDBContext.Products.ToList());
+            ViewBag.Tables = _mapper.Map<List<TableViewModel>>(rMSDBContext.Tables.Where(x=>x.IsAvailable).ToList());
+            ViewBag.Employees = _mapper.Map<List<EmployeeViewModel>>(rMSDBContext.Employees.ToList());
             var viewModels = _mapper.Map<List<OrderViewModel>>(rMSDBContext.Orders.OrderBy(o => o.CreatedAt).ToList());
             return View(viewModels); 
         }
-        public IActionResult Entry() => View();
+        public IActionResult Entry() { return View(); }
         [HttpPost]
         public JsonResult Entry(OrderViewModel anOrder) {
             try {
@@ -38,13 +40,14 @@ namespace RestaurantManagementSystem.Controllers {
                     var detailEntity = _mapper.Map<List<OrderDetailEntity>>(anOrder.orderDetails);
                     rMSDBContext.OrderDetails.AddRange(detailEntity);//adding the record to the products of db context
                     rMSDBContext.SaveChanges();// actually save to the database 
-                    ViewBag.Msg = "1 record is created successfully"; 
+                    ViewBag.Msg = "1 record is created successfully";
                 }
+                return Json(new { message = "success" });
             }
             catch (Exception ex) {
                 ViewBag.Msg = "Error occur when record is created because of " + ex.Message;
+                return Json(new { message = "error" });
             }
-            return Json(anOrder);
         }
         public IActionResult Delete(string Id) {
             try {

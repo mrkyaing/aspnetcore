@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RestaurantManagementSystem.Migrations
 {
-    public partial class intial : Migration
+    public partial class okay : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +13,7 @@ namespace RestaurantManagementSystem.Migrations
                 name: "Category",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", nullable: false),
                     Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -29,7 +29,7 @@ namespace RestaurantManagementSystem.Migrations
                 name: "Invoice",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", nullable: false),
                     No = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PaymentWith = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     OrderId = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -48,7 +48,7 @@ namespace RestaurantManagementSystem.Migrations
                 name: "Order",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", nullable: false),
                     No = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsParcel = table.Column<bool>(type: "bit", nullable: false),
                     OrderedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -68,7 +68,7 @@ namespace RestaurantManagementSystem.Migrations
                 name: "OrderDetail",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", nullable: false),
                     OrderId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProductId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
@@ -86,7 +86,7 @@ namespace RestaurantManagementSystem.Migrations
                 name: "Position",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", nullable: false),
                     Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
@@ -103,7 +103,7 @@ namespace RestaurantManagementSystem.Migrations
                 name: "Tables",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", nullable: false),
                     No = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsAvailable = table.Column<bool>(type: "bit", nullable: false),
                     AvailableCapacityPerson = table.Column<int>(type: "int", nullable: false),
@@ -121,10 +121,10 @@ namespace RestaurantManagementSystem.Migrations
                 name: "Product",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", nullable: false),
                     Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CategoryId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    CategoryId = table.Column<string>(type: "nvarchar(36)", nullable: false),
                     UnitPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     IsTodaySpecial = table.Column<bool>(type: "bit", nullable: false),
                     IsAvailable = table.Column<bool>(type: "bit", nullable: false),
@@ -147,7 +147,7 @@ namespace RestaurantManagementSystem.Migrations
                 name: "Employee",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", nullable: false),
                     Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -155,7 +155,7 @@ namespace RestaurantManagementSystem.Migrations
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DOB = table.Column<DateTime>(type: "datetime2", nullable: true),
                     JoinedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PositionId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PositionId = table.Column<string>(type: "nvarchar(36)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NRC = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProfileImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),

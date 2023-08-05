@@ -36,12 +36,12 @@ namespace RestaurantManagementSystem.Controllers {
                 };
                 rMSDBContext.Categories.Add(categoryEntity);//adding the record to the products of db context
                 rMSDBContext.SaveChanges();// actually save to the database 
-                ViewBag.Msg = "1 record is created successfully";
+                TempData["Msg"] = "1 record is created successfully";
             }
             catch (Exception ex) {
-                ViewBag.Msg = "Error occur when record is created because of " + ex.Message;
+                TempData["Msg"] = "Error occur when record is created because of " + ex.Message;
             }
-            return View();
+            return RedirectToAction("List");
         }
         public IActionResult Delete(string Id) {
             try {
@@ -57,7 +57,6 @@ namespace RestaurantManagementSystem.Controllers {
                 TempData["Msg"] = "error occur when record is deleted.";
             }
             return RedirectToAction("List");
-
         }
 
         public IActionResult Edit(string Id) {

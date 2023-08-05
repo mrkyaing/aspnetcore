@@ -25,8 +25,13 @@ namespace RestaurantManagementSystem.Controllers {
         public IActionResult Entry(TableViewModel viewModel) {
             try {
                 //DTO >> Data Transfer Object 
-                var entity = mapper.Map<TableEntity>(viewModel);
+                //var entity = mapper.Map<TableEntity>(viewModel);
+                var entity = new TableEntity();
+                entity.No = viewModel.No;
                 entity.Id = Guid.NewGuid().ToString();
+                entity.Status=viewModel.Status;
+                entity.AvailableCapacityPerson=viewModel.AvailableCapacityPerson;
+                entity.IsAvailable = viewModel.IsAvailable.Equals("y") ? true : false;
                 rMSDBContext.Tables.Add(entity);//adding the record to the products of db context
                 rMSDBContext.SaveChanges();// actually save to the database 
                 TempData["Msg"] = "1 record is created successfully";
