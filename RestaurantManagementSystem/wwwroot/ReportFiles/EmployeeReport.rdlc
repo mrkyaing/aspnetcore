@@ -586,7 +586,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!DOB.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>dd/MM/yyyy</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -796,7 +798,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!JoinedDate.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>dd/MM/yyyy</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -879,7 +883,7 @@
             <DataSetName>EmployeeReportDataSet</DataSetName>
             <Top>0.04167in</Top>
             <Height>0.5in</Height>
-            <Width>12in</Width>
+            <Width>12.00001in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -982,7 +986,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Parameters!rp1.Value</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
