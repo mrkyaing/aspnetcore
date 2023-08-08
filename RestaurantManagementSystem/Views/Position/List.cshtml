@@ -1,6 +1,7 @@
 ﻿@model IList<PositionViewModel>
 <head>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/datatables/css/datatables.bootstrap4.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <h1>Position Information </h1>
 <hr />
@@ -9,7 +10,7 @@
         <b>@TempData["Msg"] </b>
     </div>
 }
-<table class="table">
+<table class="table" id="PositionTable">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -38,3 +39,13 @@
         }
     </tbody>
 </table>
+<script>
+    $(document).ready(function () {
+        $('#PositionTable').DataTable();
+    });
+</script>
+@section Scripts
+    {
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
+}
