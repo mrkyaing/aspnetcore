@@ -123,7 +123,8 @@ namespace RestaurantManagementSystem.Controllers {
         [HttpPost]
         public IActionResult EmployeeDetailReport(string FromCode,string ToCode) {//s001 ,s003 
             var rdlcFilePath = Path.Combine(_webHostEnvironment.WebRootPath, "ReportFiles", "EmployeeReport.rdlc");
-            IList<EmployeeReportModel> employees= _rMSDBContext.Employees.Where(w => w.Code.Equals(FromCode) && w.Code.Equals(ToCode))
+            IList<EmployeeReportModel> employees= _rMSDBContext.Employees.Where(w => w.Code.CompareTo(FromCode)>=0
+                                                                                                                                        && w.Code.CompareTo(ToCode)<=0)
                 .Select(x => new EmployeeReportModel
                 {
                     Code = x.Code,
@@ -139,15 +140,16 @@ namespace RestaurantManagementSystem.Controllers {
                     BaseSalary = x.Position.Salary,
                     Age = DateTime.Now.Year - x.DOB.Year,
                 }).ToList();
-            Stream reportDefinition; // your RDLC from file or resource
+            Stream reportDefinition; 
             using var fs = new FileStream(rdlcFilePath, FileMode.Open);
             reportDefinition = fs;
             LocalReport report = new LocalReport();
             report.LoadReportDefinition(reportDefinition);
             report.DataSources.Add(new ReportDataSource("EmployeeReportDataSet", employees));
-            report.SetParameters(new[] { new ReportParameter("rp1", $"From Code {FromCode} To Code :{ToCode}") });
+            report.SetParameters(new[] { new ReportParameter("rp1", $"From Code:{FromCode} To Code :{ToCode}") });
+            byte[] pdfFile = report.Render("pdf");
             fs.Dispose();
-            return File(report.Render("pdf"), "application/pdf");
+            return File(pdfFile, "application/pdf");
         }
     }
 }
