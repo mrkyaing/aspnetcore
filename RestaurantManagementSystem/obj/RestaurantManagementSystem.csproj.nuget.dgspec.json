@@ -79,7 +79,7 @@
             },
             "System.CodeDom": {
               "target": "Package",
-              "version": "[4.8.5, )"
+              "version": "[7.0.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -87,11 +87,11 @@
             },
             "System.Drawing.Common": {
               "target": "Package",
-              "version": "[4.8.5, )"
+              "version": "[7.0.0, )"
             },
             "System.Text.Encoding.CodePages": {
               "target": "Package",
-              "version": "[4.8.5, )"
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
