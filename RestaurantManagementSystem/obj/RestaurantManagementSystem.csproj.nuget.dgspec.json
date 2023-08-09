@@ -53,6 +53,14 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.20, )"
@@ -72,6 +80,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.20, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             },
             "ReportViewerCore.NETCore": {
               "target": "Package",

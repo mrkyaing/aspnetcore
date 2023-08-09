@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.Models;
 
 namespace RestaurantManagementSystem.DAO {
-    public class RMSDBContext :DbContext{
+    public class RMSDBContext :IdentityDbContext<IdentityUser,IdentityRole,string>{
         public RMSDBContext(DbContextOptions<RMSDBContext> options) : base(options) {
         }
 

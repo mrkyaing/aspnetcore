@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.DAO;
 
@@ -9,6 +10,12 @@ var config = builder.Configuration;//create the config object
 builder.Services.AddDbContext<RMSDBContext>(o =>
     o.UseSqlServer(config.GetConnectionString("RMSConnnectionString")));//getting the connection string from appSetting.json
 
+builder.Services.AddRazorPages();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<RMSDBContext>()
+    .AddDefaultUI()
+    .AddDefaultTokenProviders();
+
 var app = builder.Build();
 if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Home/Error");
@@ -17,6 +24,8 @@ if (!app.Environment.IsDevelopment()) {
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
 app.Run();
