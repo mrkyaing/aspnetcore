@@ -113,3 +113,4 @@ C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\bin\Debug\net6.
 C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\obj\Debug\net6.0\scopedcss\Views\Shared\_AdminLayout.cshtml.rz.scp.css
