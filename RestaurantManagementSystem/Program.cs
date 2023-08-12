@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.DAO;
 
@@ -9,16 +10,24 @@ var config = builder.Configuration;//create the config object
 builder.Services.AddDbContext<RMSDBContext>(o =>
     o.UseSqlServer(config.GetConnectionString("RMSConnnectionString")));//getting the connection string from appSetting.json
 
+builder.Services.AddRazorPages();//for enabling identity functions UIs
+//register the Identity for Identity User and Identity Role with related dbContext
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<RMSDBContext>()
+    .AddDefaultUI()
+    .AddDefaultTokenProviders();
+
 var app = builder.Build();
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+//for enabling the Authentication & Authorization
+app.UseAuthentication();
 app.UseAuthorization();
-app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+//app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapDefaultControllerRoute();
+app.MapRazorPages();//for enabling  route paths for the Authentication & Authorization (Ccontrollers Path)
 app.Run();
