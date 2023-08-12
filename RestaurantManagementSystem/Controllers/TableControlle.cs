@@ -55,7 +55,6 @@ namespace RestaurantManagementSystem.Controllers {
                 TempData["Msg"] = "error occur when record is deleted.";
             }
             return RedirectToAction("List");
-
         }
 
         public IActionResult Edit(string Id) {

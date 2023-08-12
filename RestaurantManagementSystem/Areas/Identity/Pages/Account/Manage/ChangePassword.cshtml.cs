@@ -18,10 +18,7 @@ namespace RestaurantManagementSystem.Areas.Identity.Pages.Account.Manage
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<ChangePasswordModel> _logger;
 
-        public ChangePasswordModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
-            ILogger<ChangePasswordModel> logger)
+        public ChangePasswordModel(UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager,ILogger<ChangePasswordModel> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;

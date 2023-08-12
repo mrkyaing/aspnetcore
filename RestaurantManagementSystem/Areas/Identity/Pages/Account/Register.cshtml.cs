@@ -24,7 +24,9 @@ namespace RestaurantManagementSystem.Areas.Identity.Pages.Account
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
+
         private readonly UserManager<IdentityUser> _userManager;
+
         private readonly IUserStore<IdentityUser> _userStore;
         private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
@@ -116,7 +118,7 @@ namespace RestaurantManagementSystem.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                var result = await _userManager.CreateAsync(user, Input.Password);
+                var result = await _userManager.CreateAsync(user, Input.Password);//susu@gmail.com,susu@123@!@##
 
                 if (result.Succeeded)
                 {
