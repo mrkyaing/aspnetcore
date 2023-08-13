@@ -4,6 +4,7 @@ using RestaurantManagementSystem.Models;
 using RestaurantManagementSystem.Models.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.Utilities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RestaurantManagementSystem.Controllers {
     public class ProductController : Controller {
@@ -27,11 +28,12 @@ namespace RestaurantManagementSystem.Controllers {
             }).OrderBy(o=>o.Code).ToList();
             return View(products);
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Entry() {
             ViewBag.Categories=rMSDBContext.Categories.ToList();
             return View();
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Entry(ProductViewModel productViewModel) {
             try {
@@ -54,7 +56,7 @@ namespace RestaurantManagementSystem.Controllers {
             }
             return RedirectToAction("List");
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(string Id) {
             try {
                 var product = rMSDBContext.Products.Where(x => x.Id.Equals(Id)).SingleOrDefault();
@@ -70,7 +72,7 @@ namespace RestaurantManagementSystem.Controllers {
             }
             return RedirectToAction("List");
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(string Id) {
             ProductViewModel  productViewModel = rMSDBContext.Products.Where(x => x.Id.Equals(Id)).Select(x=>new ProductViewModel
             {
@@ -85,6 +87,7 @@ namespace RestaurantManagementSystem.Controllers {
             ViewBag.Categories = rMSDBContext.Categories.ToList();
             return View(productViewModel);
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Update(ProductViewModel productViewModel) {
             try {
