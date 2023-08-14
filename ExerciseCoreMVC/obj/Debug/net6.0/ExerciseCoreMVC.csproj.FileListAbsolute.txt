@@ -64,7 +64,6 @@ C:\Users\DELL\source\repos\aspnetcore\ExerciseCoreMVC\bin\Debug\net6.0\ExerciseC
 C:\Users\DELL\source\repos\aspnetcore\ExerciseCoreMVC\bin\Debug\net6.0\ExerciseCoreMVC.runtimeconfig.json
 C:\Users\DELL\source\repos\aspnetcore\ExerciseCoreMVC\bin\Debug\net6.0\ExerciseCoreMVC.dll
 C:\Users\DELL\source\repos\aspnetcore\ExerciseCoreMVC\bin\Debug\net6.0\ExerciseCoreMVC.pdb
-C:\Users\DELL\source\repos\aspnetcore\ExerciseCoreMVC\obj\Debug\net6.0\ExerciseCoreMVC.csproj.AssemblyReference.cache
 C:\Users\DELL\source\repos\aspnetcore\ExerciseCoreMVC\obj\Debug\net6.0\ExerciseCoreMVC.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\source\repos\aspnetcore\ExerciseCoreMVC\obj\Debug\net6.0\ExerciseCoreMVC.AssemblyInfoInputs.cache
 C:\Users\DELL\source\repos\aspnetcore\ExerciseCoreMVC\obj\Debug\net6.0\ExerciseCoreMVC.AssemblyInfo.cs

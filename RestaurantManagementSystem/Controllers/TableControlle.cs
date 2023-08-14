@@ -64,7 +64,6 @@ namespace RestaurantManagementSystem.Controllers {
         [Authorize(Roles = "Admin")]
         public IActionResult Edit(string Id) {
             var viewModel =mapper.Map<PositionViewModel>( rMSDBContext.Positions.Where(x => x.Id.Equals(Id)).SingleOrDefault());
-
             return View(viewModel);
         }
         [Authorize(Roles = "Admin")]
