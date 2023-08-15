@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-black border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-white bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Restaurant Management System</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -23,66 +23,35 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Category</a>
+                            <a class="nav-link dropdown-toggle text-Dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Category</a>
                             <div class="dropdown-menu dropdown-menu-dark">
                                 <a class="dropdown-item" href="/category/list">List</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/category/entry">Entry</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Product</a>
+                            <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Product</a>
                             <div class="dropdown-menu dropdown-menu-dark">
                                 <a class="dropdown-item" href="/product/list">List</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/product/entry">Entry</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Position</a>
-                            <div class="dropdown-menu dropdown-menu-dark">
-                                <a class="dropdown-item" href="/position/list">List</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/position/entry">Entry</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Table</a>
+                            <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Table</a>
                             <div class="dropdown-menu dropdown-menu-dark">
                                 <a class="dropdown-item" href="/table/list">List</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/table/entry">Entry</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Employee</a>
-                            <div class="dropdown-menu dropdown-menu-dark">
-                                <a class="dropdown-item" href="/employee/list">List</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/employee/entry">Entry</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Order</a>
+                            <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Order</a>
                             <div class="dropdown-menu dropdown-menu-dark">
                                 <a class="dropdown-item" href="/orderprocess/list">List</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/orderprocess/entry">Entry</a>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reports</a>
-                            <div class="dropdown-menu dropdown-menu-dark">
-                                <a class="dropdown-item" href="/employee/EmployeeDetailReport">Employee Detail Report</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/product/ProductDetailReport">Product Detail Report</a>
-                            </div>
-                        </li>
-                       
-                        <li class="nav-item text-white">
+                        <li class="nav-item text-dark">
                             <partial name="_LoginPartial" />
                         </li>
                     </ul>

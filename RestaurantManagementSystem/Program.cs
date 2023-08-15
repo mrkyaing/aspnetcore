@@ -9,13 +9,11 @@ builder.Services.AddControllersWithViews();
 var config = builder.Configuration;//create the config object 
 builder.Services.AddDbContext<RMSDBContext>(o =>
     o.UseSqlServer(config.GetConnectionString("RMSConnnectionString")));//getting the connection string from appSetting.json
-
 builder.Services.AddRazorPages();//for enabling identity functions UIs
 //register the Identity for Identity User and Identity Role with related dbContext
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<RMSDBContext>()
     .AddDefaultUI()
     .AddDefaultTokenProviders();
-
 var app = builder.Build();
 if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Home/Error");
@@ -29,5 +27,5 @@ app.UseAuthentication();
 app.UseAuthorization();
 //app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapDefaultControllerRoute();
-app.MapRazorPages();//for enabling  route paths for the Authentication & Authorization (Ccontrollers Path)
+app.MapRazorPages();//for enabling  route paths for the Authentication & Authorization (Controllers Path)
 app.Run();

@@ -33,7 +33,6 @@ C:\Users\DELL\source\repos\aspnetcore\CurrencyConvertor\bin\Debug\net6.0\Currenc
 C:\Users\DELL\source\repos\aspnetcore\CurrencyConvertor\bin\Debug\net6.0\CurrencyConvertor.runtimeconfig.json
 C:\Users\DELL\source\repos\aspnetcore\CurrencyConvertor\bin\Debug\net6.0\CurrencyConvertor.dll
 C:\Users\DELL\source\repos\aspnetcore\CurrencyConvertor\bin\Debug\net6.0\CurrencyConvertor.pdb
-C:\Users\DELL\source\repos\aspnetcore\CurrencyConvertor\obj\Debug\net6.0\CurrencyConvertor.csproj.AssemblyReference.cache
 C:\Users\DELL\source\repos\aspnetcore\CurrencyConvertor\obj\Debug\net6.0\CurrencyConvertor.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\source\repos\aspnetcore\CurrencyConvertor\obj\Debug\net6.0\CurrencyConvertor.AssemblyInfoInputs.cache
 C:\Users\DELL\source\repos\aspnetcore\CurrencyConvertor\obj\Debug\net6.0\CurrencyConvertor.AssemblyInfo.cs

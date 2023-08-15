@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.DAO;
 using RestaurantManagementSystem.Models;
@@ -22,7 +23,9 @@ namespace RestaurantManagementSystem.Controllers {
             }).OrderBy(o => o.Code).ToList();
             return View(categories);
         }
+        [Authorize(Roles ="Admin")]
         public IActionResult Entry() => View();
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Entry(CategoryViewModel viewModel) {
             try {
@@ -43,6 +46,7 @@ namespace RestaurantManagementSystem.Controllers {
             }
             return RedirectToAction("List");
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(string Id) {
             try {
                 var entity = rMSDBContext.Categories.Where(x => x.Id.Equals(Id)).SingleOrDefault();
@@ -58,7 +62,7 @@ namespace RestaurantManagementSystem.Controllers {
             }
             return RedirectToAction("List");
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(string Id) {
             var viewModel = rMSDBContext.Categories.Where(x => x.Id.Equals(Id)).Select(x => new CategoryViewModel
             {
@@ -69,6 +73,7 @@ namespace RestaurantManagementSystem.Controllers {
 
             return View(viewModel);
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Update(CategoryViewModel viewModel) {
             try {

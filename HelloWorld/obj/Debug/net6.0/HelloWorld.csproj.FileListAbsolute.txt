@@ -33,7 +33,6 @@ C:\Users\DELL\source\repos\aspnetcore\HelloWorld\bin\Debug\net6.0\HelloWorld.dep
 C:\Users\DELL\source\repos\aspnetcore\HelloWorld\bin\Debug\net6.0\HelloWorld.runtimeconfig.json
 C:\Users\DELL\source\repos\aspnetcore\HelloWorld\bin\Debug\net6.0\HelloWorld.dll
 C:\Users\DELL\source\repos\aspnetcore\HelloWorld\bin\Debug\net6.0\HelloWorld.pdb
-C:\Users\DELL\source\repos\aspnetcore\HelloWorld\obj\Debug\net6.0\HelloWorld.csproj.AssemblyReference.cache
 C:\Users\DELL\source\repos\aspnetcore\HelloWorld\obj\Debug\net6.0\HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\source\repos\aspnetcore\HelloWorld\obj\Debug\net6.0\HelloWorld.AssemblyInfoInputs.cache
 C:\Users\DELL\source\repos\aspnetcore\HelloWorld\obj\Debug\net6.0\HelloWorld.AssemblyInfo.cs

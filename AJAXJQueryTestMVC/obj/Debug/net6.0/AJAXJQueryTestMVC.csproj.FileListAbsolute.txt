@@ -33,7 +33,6 @@ C:\Users\DELL\source\repos\aspnetcore\AJAXJQueryTestMVC\bin\Debug\net6.0\AJAXJQu
 C:\Users\DELL\source\repos\aspnetcore\AJAXJQueryTestMVC\bin\Debug\net6.0\AJAXJQueryTestMVC.runtimeconfig.json
 C:\Users\DELL\source\repos\aspnetcore\AJAXJQueryTestMVC\bin\Debug\net6.0\AJAXJQueryTestMVC.dll
 C:\Users\DELL\source\repos\aspnetcore\AJAXJQueryTestMVC\bin\Debug\net6.0\AJAXJQueryTestMVC.pdb
-C:\Users\DELL\source\repos\aspnetcore\AJAXJQueryTestMVC\obj\Debug\net6.0\AJAXJQueryTestMVC.csproj.AssemblyReference.cache
 C:\Users\DELL\source\repos\aspnetcore\AJAXJQueryTestMVC\obj\Debug\net6.0\AJAXJQueryTestMVC.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\source\repos\aspnetcore\AJAXJQueryTestMVC\obj\Debug\net6.0\AJAXJQueryTestMVC.AssemblyInfoInputs.cache
 C:\Users\DELL\source\repos\aspnetcore\AJAXJQueryTestMVC\obj\Debug\net6.0\AJAXJQueryTestMVC.AssemblyInfo.cs

@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.DAO;
 using RestaurantManagementSystem.Models;
 using RestaurantManagementSystem.Models.ViewModels;
 using RestaurantManagementSystem.Utilities;
+using System.Data;
 
 namespace RestaurantManagementSystem.Controllers {
     public class TableController : Controller {
@@ -20,7 +22,9 @@ namespace RestaurantManagementSystem.Controllers {
             IList<TableViewModel> positions =mapper.Map<List<TableViewModel>>(rMSDBContext.Tables.OrderBy(o => o.No).ToList());
             return View(positions);
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult Entry() => View();
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Entry(TableViewModel viewModel) {
             try {
@@ -41,6 +45,7 @@ namespace RestaurantManagementSystem.Controllers {
             }
             return RedirectToAction("List");
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(string Id) {
             try {
                 var entity = rMSDBContext.Positions.Where(x => x.Id.Equals(Id)).SingleOrDefault();
@@ -56,12 +61,12 @@ namespace RestaurantManagementSystem.Controllers {
             }
             return RedirectToAction("List");
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(string Id) {
             var viewModel =mapper.Map<PositionViewModel>( rMSDBContext.Positions.Where(x => x.Id.Equals(Id)).SingleOrDefault());
-
             return View(viewModel);
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Update(PositionViewModel viewModel) {
             try {

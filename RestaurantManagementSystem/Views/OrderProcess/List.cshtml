@@ -35,8 +35,9 @@
                         <td>@item.No</td>
                         <td>@item.IsParcel</td>
                         <td>@item.Status</td>
-                        <td>@item.TableId</td>
-                        <td>@item.EmployeeId</td>
+                        <td>@item.Table.No</td>
+                        <td>@item.Employee.Name</td>
+                        <td>Detail | Edit | Delete | Make Payment</td>
                     </tr>
                     i++;
                 }
@@ -109,6 +110,7 @@
                 <table id="detailsTable" class="table">
                     <thead>
                         <tr>
+                           <th style="width:35%;visibility:hidden">ProductId</th>
                             <th style="width:35%">Product</th>
                             <th style="width:20%">Unit Price</th>
                             <th style="width:15%">Quantity</th>
@@ -120,7 +122,8 @@
                     <tbody></tbody>
                     <tfoot>
                         <tr>
-                            <td></td>
+                        <td style="visibility:hidden"></td>
+                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -247,17 +250,17 @@
                 };
 
                 var productId = $("#txtProductId").val(),
+                    ProductName = $("#txtProductId option:selected").text(),
                     UnitPrice = $("#txtUnitPrice").val(),
                     quantity = $("#txtQty").val(),
                     remark=$("#txtRemark").val(),
                     detailsTableBody = $("#detailsTable tbody");
 
-            var productItem = '<tr><td>' + productId + '</td><td>' + UnitPrice + '</td><td>' + quantity + '</td><td>' + (parseFloat(UnitPrice) * parseInt(quantity)) + '</td><td>' + remark + '</td><td>' + '</td><td><a data-itemId="0" href="#" class="deleteItem">Remove</a></td></tr>';
+            var productItem = '<tr><td style="visibility:hidden">' + productId + '</td><td>' + ProductName + '</td><td>' + UnitPrice + '</td><td>' + quantity + '</td><td>' + (parseFloat(UnitPrice) * parseInt(quantity)) + '</td><td>' + remark + '</td><td>' + '</td><td><a data-itemId="0" href="#" class="deleteItem">Remove</a></td></tr>';
                 detailsTableBody.append(productItem);
                 clearItem();
             $('#orderDetailsModal').modal('hide');
             });
-
             function clearItem() {
                 $("#txtProductId").val('');
                 $("#txtUnitPrice").val('');
