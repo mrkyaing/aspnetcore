@@ -6,7 +6,9 @@
         public DateTime OrderedAt { get; set; } 
         public string? Status { get; set; }
         public string EmployeeId { get; set; }
+        public virtual EmployeeEntity Employee { get; set; }
         public string TableId { get; set; }
-       public virtual  OrderDetailViewModel[] orderDetails { get;set; }
+        public virtual TableEntity Table { get; set; }
+        public virtual  OrderDetailViewModel[] orderDetails { get;set; }
     }
 }
