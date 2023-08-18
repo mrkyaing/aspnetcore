@@ -1,0 +1,56 @@
+﻿@model IList<InvoiceViewModel>
+<head>
+    <link href="~/lib/datatables/css/datatables.bootstrap4.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<h1>Invoice Information </h1>
+<hr />
+@if (TempData["Msg"] != null) {
+    <div class="text-info">
+        <b>@TempData["Msg"] </b>
+    </div>
+}
+<table class="table" id="InvoiceTable">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">No</th>
+            <th scope="col">PaymentWith</th>
+            <th scope="col">OrderId </th>
+            <th scope="col">Total Amount (MMK)</th>
+            <th scope="col">EmployeeId</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int index = 1;
+        }
+        @foreach (var product in Model) {
+            <tr>
+                <th scope="row">@index</th>
+                <td>@product.No</td>
+                <td>@product.PaymentWith</td>
+                <td>@product.OrderId </td>
+                <td>@product.TotalAmount</td>
+                <td>@product.EmployeeId</td>
+                <td>
+                    <a href="/invoice/pay?Id=@product.Id" onclick=" return confirm('are you sure to pay this record?');" class="btn btn-danger" role="button">Pay</a>
+                    <a href="/invoice/edit?Id=@product.Id" class="btn btn-success" role="button">edit</a>
+                    <a href="/invoice/delete?Id=@product.Id" onclick=" return confirm('are you sure to delete this record?');" class="btn btn-danger" role="button">delete</a>
+                </td>
+            </tr>
+            index++;
+        }
+    </tbody>
+</table>
+<script>
+    $(document).ready(function () {
+        $('#InvoiceTable').DataTable();
+    });
+</script>
+@section Scripts
+    {
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
+}
