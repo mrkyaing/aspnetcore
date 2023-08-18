@@ -1,5 +1,6 @@
 ﻿@model List<OrderViewModel>
 <head>
+    <link href="~/lib/datatables/css/datatables.bootstrap4.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <div class="panel panel-default">
@@ -37,7 +38,12 @@
                         <td>@item.Status</td>
                         <td>@item.Table.No</td>
                         <td>@item.Employee.Name</td>
-                        <td>Detail | Edit | Delete | Make Payment</td>
+                        <td>
+                            <a href="/Invoice/Entry?OrderId=@item.Id" class="btn btn-success" role="button">  Make Payment</a>
+                            <a href="/orderprocess/edit?Id=@item.Id" class="btn btn-warning" role="button">Detail</a>
+                            <a href="/orderprocess/edit?Id=@item.Id" class="btn btn-primary" role="button">Edit</a>
+                            <a href="/orderprocess/delete?Id=@item.Id" onclick=" return confirm('are you sure to delete this record?');" class="btn btn-danger" role="button">Delete</a>
+                        </td>
                     </tr>
                     i++;
                 }
@@ -103,6 +109,16 @@
                             }
                         </select>
                     </div>
+                    <label class="control-label col-md-2">
+                        Employee Assigned To
+                    </label>
+                    <div class="col-md-4">
+                        <select class="form-control" id="txtEmployeeId">
+                            @foreach (var p in ViewBag.Employees) {
+                                <option value="@p.Id">@p.Code :@p.Name</option>
+                            }
+                        </select>
+                    </div>
                 </div>
                 </div>
 
@@ -128,7 +144,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                        <td></td>
+                            <td></td>
                             <td>
                                 <a class="btn btn-info" id="addMore">Add Detail</a>
                             </td>
@@ -231,6 +247,7 @@
             $("#txtIsPercel").val('');
             $("#txtStatus").val('');
             $("#txtTableNo").val('');
+            $("#txtEmployeeId").val('');
                 $("#detailsTable tbody tr").remove();
                 $("#saveOrder").html("Make an Order");
                 $('#newOrderModal').modal('show');
@@ -336,17 +353,18 @@
             AnOrder.IsParcel = $("#txtIsPercel").val();//30 getting the value from the text box
             AnOrder.Status = $("#txtStatus").val();//1 getting the value from the text box
             AnOrder.TableId = $("#txttableId").val();//30 getting the value from the text box
-            AnOrder.EmployeeId = $("#txttableId").val();//1 getting the value from the text box
+            AnOrder.EmployeeId = $("#txtEmployeeId").val();//1 getting the value from the text box
             AnOrder.orderDetails = orderDetails
 
             $.when(saveOrder(AnOrder)).then(function (response) {
-                    console.log(response);
+                 
+                    if(response.equals('success')){
                     alert("success");
-                    if(response.equals("success")){
-                    window.location.href = "/orderprocess/list";
+                    window.location.assign("/orderprocess/list")
                     }
                 }).fail(function (err) {
-                    console.log(err);
+                alert("error");
+                console.log(err);
                 });
             });
 
@@ -397,5 +415,15 @@
     $('#closemodal').click(function () {
         $('#newOrderModal').modal('hide');
     });
+
+    $(document).ready(function () {
+        $('#ordersTable').DataTable();
+    });
     </script>
 
+
+@section Scripts
+    {
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
+}
