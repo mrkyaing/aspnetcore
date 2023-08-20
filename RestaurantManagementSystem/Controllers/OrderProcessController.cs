@@ -16,15 +16,28 @@ namespace RestaurantManagementSystem.Controllers {
             _mapper = mapper;
         }
         public IActionResult List() {
-            ViewBag.Products=_mapper.Map<List<ProductViewModel>>(rMSDBContext.Products.ToList());
-            ViewBag.Tables = _mapper.Map<List<TableViewModel>>(rMSDBContext.Tables.Where(x=>x.IsAvailable).ToList());
-            ViewBag.Employees = _mapper.Map<List<EmployeeViewModel>>(rMSDBContext.Employees.ToList());
+            ViewBag.Products = rMSDBContext.Products.Select(s => new ProductViewModel
+            {
+                Id= s.Id,
+                Name= s.Name,
+            });
+            ViewBag.Tables = rMSDBContext.Tables.Where(x=>x.IsAvailable).Select(s => new TableViewModel
+            {
+                Id= s.Id,
+                No= s.No,
+            });
+            ViewBag.Employees = rMSDBContext.Employees.Where(x => x.Position.Name.Equals("Waiter")).Select(s => new EmployeeViewModel
+            {
+                Id = s.Id,
+                Name= s.Code +":"+s.Name,
+            });
+
             var viewModels =rMSDBContext.Orders.Select(s=>new OrderViewModel{
                 Id=s.Id,
                 No=s.No,
                 IsParcel=s.IsParcel==true?"yes":"no",
                 Status=s.Status,
-               Employee=s.Employee,
+                Employee=s.Employee,
                 EmployeeId=s.EmployeeId,
                 Table=s.Table,
                 TableId=s.TableId,
@@ -36,28 +49,42 @@ namespace RestaurantManagementSystem.Controllers {
         [HttpPost]
         public JsonResult Entry(OrderViewModel anOrder) {
             try {
-                    //DTO >> Data Transfer Object 
-                    var entity = _mapper.Map<OrderEntity>(anOrder);
-                    entity.Id = Guid.NewGuid().ToString();//for new id when uer create the record 36 char GUID  , UUID 
-                    //entity.Ip = NetworkHelper.GetLocalIp();
-                    rMSDBContext.Orders.Add(entity);//adding the record to the products of db context
-                    rMSDBContext.SaveChanges();// actually save to the database 
-                    foreach (var detail in anOrder.orderDetails) {
-                        detail.Id = Guid.NewGuid().ToString();
-                        detail.OrderId = entity.Id;
+                var entity = new OrderEntity(){
+                    Id = Guid.NewGuid().ToString(),//for new id when uer create the record 36 char GUID  , UUID ,  (primary key)
+                    No = anOrder.No,
+                    TableId = anOrder.TableId,
+                    EmployeeId= anOrder.EmployeeId,
+                    IsParcel=anOrder.IsParcel=="Yes"?true:false,
+                    Status=anOrder.Status,
+                };
+                //adding the record to the Orders of db context
+                rMSDBContext.Orders.Add(entity);
+                
+                var orderDetails = new List<OrderDetailEntity>();
+                foreach (var detail in anOrder.orderDetails) {
+                       OrderDetailEntity orderDetail = new OrderDetailEntity(){
+                        Id= Guid.NewGuid().ToString(),//order master Id (primary key)
+                        OrderId=entity.Id,//get the foreign key 
+                        ProductId=detail.ProductId,
+                        Quantity=detail.Quantity,
+                        Remark=detail.Remark,
+                         };
+                    orderDetails.Add(orderDetail);//collecting the order details
                     }
-                    var detailEntity = _mapper.Map<List<OrderDetailEntity>>(anOrder.orderDetails);
-                    rMSDBContext.OrderDetails.AddRange(detailEntity);//adding the record to the products of db context
-                    rMSDBContext.SaveChanges();// actually save to the database 
-                   var table=rMSDBContext.Tables.Where(x=>x.Id.Equals(anOrder.TableId)).SingleOrDefault();
-                   table.IsAvailable = false;
-                 rMSDBContext.Entry(table).State = EntityState.Modified;//editing the record to the products of db context
-                rMSDBContext.SaveChanges();// actually save to the database 
-                return Json(new { message = "success" });
+                    rMSDBContext.OrderDetails.AddRange(orderDetails);//adding the records to the OrderDetails of db context
+
+                var table=rMSDBContext.Tables.Where(x=>x.Id.Equals(anOrder.TableId)).SingleOrDefault();
+                  if(table is not null) {
+                    table.IsAvailable = false;
+                    rMSDBContext.Entry(table).State = EntityState.Modified;
+                }
+
+                rMSDBContext.SaveChanges();//finally actually save to the database 
+                return Json(new { response = "success" });
             }
             catch (Exception ex) {
                 ViewBag.Msg = "Error occur when record is created because of " + ex.Message;
-                return Json(new { message = "error" });
+                return Json(new { response = "error" });
             }
         }
         public IActionResult Delete(string Id) {
