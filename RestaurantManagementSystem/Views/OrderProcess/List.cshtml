@@ -273,25 +273,21 @@
         AnOrder.EmployeeId = $("#txtEmployeeId").val();//e1 getting the value from the text box
         AnOrder.orderDetails = orderDetails;
         //make saveOrder function called to the Controller
-        $.when(saveOrder(AnOrder)).then(function (response) {
-            if (response.equals('success')) {
+        $.ajax({
+            type: 'POST',
+            url: '/orderprocess/entry',
+            data: AnOrder,
+            success: function (response) {
                 alert('success');
                 $('#newOrderModal').modal('hide');//Closing newOrderModal  popup
                 window.location.assign("/orderprocess/list");
+            },
+            error: function (xhr) {
+                console.log(xhr.responseText);
+                alert("Error has occurred..");
             }
-        }).fail(function (err) {
-            alert("error");
-        });//end of when AJAX
-
-});//end of  saveOrder click
-   // define a method to called POST action to OrderProcessController
-    function saveOrder(AnOrder) {
-        return $.ajax({
-            type: 'POST',
-            url: '/orderprocess/entry',
-            data: AnOrder
         });
-    }
+    });//end of  saveOrder click
 
     $(document).on('click', 'a.deleteItem', function (e) {
         e.preventDefault();
