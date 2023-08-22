@@ -35,7 +35,7 @@ namespace RestaurantManagementSystem.Controllers {
             var viewModels =rMSDBContext.Orders.Select(s=>new OrderViewModel{
                 Id=s.Id,
                 No=s.No,
-                IsParcel=s.IsParcel==true?"yes":"no",
+                IsParcel=s.IsParcel==true?"YES":"NO",
                 Status=s.Status,
                 Employee=s.Employee,
                 EmployeeId=s.EmployeeId,
