@@ -272,7 +272,7 @@
         AnOrder.TableId = $("#txttableId").val();//t1 getting the value from the text box
         AnOrder.EmployeeId = $("#txtEmployeeId").val();//e1 getting the value from the text box
         AnOrder.orderDetails = orderDetails;
-        //make saveOrder function called to the Controller
+        //make saveOrder  to the Controller
         $.ajax({
             type: 'POST',
             url: '/orderprocess/entry',
