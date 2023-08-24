@@ -175,7 +175,7 @@
                         </div>
                         <div class="col-md-6">
                             <label class="control-label col-md-3">Unit Price</label>
-                            <input type="number" id="txtUnitPrice" placeholder="Product Price" class="form-control" />
+                            <input type="number" id="txtUnitPrice" placeholder="Product Price" class="form-control" required readonly/>
                         </div>
                         <div class="col-md-6">
                             <label class="control-label col-md-2">Quanity </label>
@@ -347,8 +347,26 @@
                     console.log(err);
                 });
             });
-   //
-            $(document).ready(function () {
+   //drop down option
+    $("#txtProductId").change(function () {
+        $.ajax({
+            type: 'get',
+            url: '/OrderProcess/GetUnitPriceByProductId',
+            dataType: 'json',
+            data: { id: $("#txtProductId").val() },
+            success: function (data) {
+                var unitPrice=JSON.stringify(data);
+                $("#txtUnitPrice").val(unitPrice);
+    },
+        error: function (ex) {
+            var r = jQuery.parseJSON(response.responseText);
+            alert("Message: " + r.Message);
+            alert("StackTrace: " + r.StackTrace);
+            alert("ExceptionType: " + r.ExceptionType);
+        }
+            });
+    });
+$(document).ready(function () {
         $('#ordersTable').DataTable();
     });
     </script>

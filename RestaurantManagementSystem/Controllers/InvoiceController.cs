@@ -17,7 +17,7 @@ namespace RestaurantManagementSystem.Controllers {
             this._mapper = mapper;
         }
         public IActionResult List() {
-            var invoices=_rMSDBContext.Invoices.Select(x=>new InvoiceViewModel
+            IQueryable<InvoiceViewModel> invoices =_rMSDBContext.Invoices.Select(x=>new InvoiceViewModel
             {
                 EmployeeId = x.EmployeeId,
                 OrderId = x.OrderId,
@@ -30,7 +30,7 @@ namespace RestaurantManagementSystem.Controllers {
        // public IActionResult Entry() => View();
             public IActionResult Entry(string OrderId) {
             ViewBag.Employees = _mapper.Map<List<EmployeeViewModel>>(_rMSDBContext.Employees.ToList());
-            var orderToPay=(from o in _rMSDBContext.Orders
+            InvoiceViewModel orderToPay =(from o in _rMSDBContext.Orders
                                                     join od in _rMSDBContext.OrderDetails 
                                                    on o.Id equals od.OrderId
                                                    join p in _rMSDBContext.Products
@@ -40,7 +40,8 @@ namespace RestaurantManagementSystem.Controllers {
                                                       OrderId=OrderId,
                                                       TotalAmount=(od.Quantity*p.UnitPrice),
                                                       OrderNo=o.No,
-                                                      TableId=o.TableId
+                                                      TableId=o.TableId,
+                                                      No="INV"+DateTime.Now.ToString("ddMMyyyyHHmmddsss")
                                                    }).FirstOrDefault();
             return View(orderToPay);
         }
@@ -58,14 +59,19 @@ namespace RestaurantManagementSystem.Controllers {
                 entity.EmployeeId = viewModel.EmployeeId;
                 entity.TotalAmount = viewModel.TotalAmount;
                 entity.PaymentWith= viewModel.PaymentWith;
-                _rMSDBContext.Invoices.Add(entity);//adding the record to the products of db context
+                _rMSDBContext.Invoices.Add(entity);//adding the record to the Invoices of db context
+                var order=_rMSDBContext.Orders.Where(x=>x.Id==viewModel.OrderId).FirstOrDefault();
+                if (order is not null) {
+                    order.IsPaid = true;
+                    _rMSDBContext.Entry(order).State = EntityState.Modified;//editing the record to the products of db context
+                }
                 var table = _rMSDBContext.Tables.Where(x => x.Id == viewModel.TableId).SingleOrDefault();
-              if(table is not null) {
+                if(table is not null) {
                     table.IsAvailable = true;
                     _rMSDBContext.Entry(table).State = EntityState.Modified;//editing the record to the products of db context
                 }
                 _rMSDBContext.SaveChanges();// actually save to the database 
-                TempData["Msg"] = "1 record is created successfully";
+                TempData["Msg"] = "Invoice Payment is created successfully";
             }
             catch (Exception ex) {
                 TempData["Msg"] = "Error occur when record is created because of " + ex.Message;

@@ -32,7 +32,7 @@ namespace RestaurantManagementSystem.Controllers {
                 Name= s.Code +":"+s.Name,
             });
 
-            var viewModels =rMSDBContext.Orders.Select(s=>new OrderViewModel{
+            var viewModels =rMSDBContext.Orders.Where(x=>x.IsPaid==false).Select(s=>new OrderViewModel{
                 Id=s.Id,
                 No=s.No,
                 IsParcel=s.IsParcel==true?"YES":"NO",
@@ -46,6 +46,10 @@ namespace RestaurantManagementSystem.Controllers {
             return View(viewModels); 
         }
         public IActionResult Entry() { return View(); }
+        public JsonResult GetUnitPriceByProductId(string id) {
+            var Product=rMSDBContext.Products.Where(x=>x.Id.Equals(id)).FirstOrDefault();
+            return Json(Product.UnitPrice);
+        }
         [HttpPost]
         public JsonResult Entry(OrderViewModel anOrder) {
             try {
@@ -56,6 +60,7 @@ namespace RestaurantManagementSystem.Controllers {
                     EmployeeId= anOrder.EmployeeId,
                     IsParcel=anOrder.IsParcel=="Yes"?true:false,
                     Status=anOrder.Status,
+                    IsPaid=false
                 };
                 //adding the record to the Orders of db context
                 rMSDBContext.Orders.Add(entity);
@@ -104,7 +109,6 @@ namespace RestaurantManagementSystem.Controllers {
             }
             return RedirectToAction("List");
         }
-
         public IActionResult Edit(string Id) {
             var viewModel = rMSDBContext.Categories.Where(x => x.Id.Equals(Id)).Select(x => new CategoryViewModel{
                 Id = x.Id,
