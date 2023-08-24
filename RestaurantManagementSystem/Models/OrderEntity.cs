@@ -13,5 +13,6 @@ namespace RestaurantManagementSystem.Models {
         [ForeignKey("TableId")]
         public string TableId { get; set; }
         public virtual TableEntity? Table { get; set; }
+        public bool IsPaid { get; set; }
     }
 }
