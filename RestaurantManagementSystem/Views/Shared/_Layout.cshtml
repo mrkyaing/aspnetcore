@@ -1,6 +1,9 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using Microsoft.AspNetCore.Identity
 
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,67 +11,115 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RestaurantManagementSystem.styles.css" asp-append-version="true" />
+    <!-- font icons -->
+    <link rel="stylesheet" href="~/assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Pigga main styles -->
+    <link rel="stylesheet" href="~/assets/css/pigga.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-white bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Restaurant Management System</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+    <!-- First Navigation -->
+    <nav class="navbar nav-first navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="~/assets/imgs/navbar-brand.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
+            </a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#home">CALL US : <span class="pl-2 text-muted">(+959) 2562 75319</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of First Navigation -->
+
+    <!-- Second Navigation -->
+    <nav class="nav-second navbar custom-navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Today Specials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testmonial">Testmonials</a>
+                    </li>
+                    @if (SignInManager.IsSignedIn(User)) {
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" href="/table/list">Check Tables</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-Dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Category</a>
-                            <div class="dropdown-menu dropdown-menu-dark">
-                                <a class="dropdown-item" href="/category/list">List</a>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/orderprocess/list">Order process</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Product</a>
-                            <div class="dropdown-menu dropdown-menu-dark">
-                                <a class="dropdown-item" href="/product/list">List</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Table</a>
-                            <div class="dropdown-menu dropdown-menu-dark">
-                                <a class="dropdown-item" href="/table/list">List</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Order</a>
-                            <div class="dropdown-menu dropdown-menu-dark">
-                                <a class="dropdown-item" href="/orderprocess/list">List</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/orderprocess/entry">Entry</a>
-                            </div>
-                        </li>
-                        <li class="nav-item text-dark">
-                            <partial name="_LoginPartial" />
-                        </li>
-                    </ul>
+                    }
+                    <li class="nav-item">
+                        <partial name="_LoginPartial"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Second Navigation -->
+
+    <div class="container"><main role="main" class="pb-3"> @RenderBody()</main></div>
+
+    <!-- Prefooter Section  -->
+    <div class="py-4 border border-lighter border-bottom-0 border-left-0 border-right-0 bg-dark">
+        <div class="container">
+            <div class="row justify-content-between align-items-center text-center">
+                <div class="col-md-3 text-md-left mb-3 mb-md-0">
+                    <img src="~/assets/imgs/navbar-brand.svg" width="100" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page" class="mb-0">
+                </div>
+                <div class="col-md-9 text-md-right">
+                    <a href="#" class="px-3"><small class="font-weight-bold">Our Company</small></a>
+                    <a href="#" class="px-3"><small class="font-weight-bold">Our Location</small></a>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        </div>
     </div>
+    <!-- End of PreFooter Section -->
+  
+    <!-- Page Footer -->
+    <footer class="border border-dark border-left-0 border-right-0 border-bottom-0 p-4 bg-dark">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-left">
+                <div class="col">
+                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, <a href="https://www.devcrud.com" target="_blank">DevCrud</a>  All rights reserved </p>
+                </div>
+                <div class="d-none d-md-block">
+                    <h6 class="small mb-0">
+                        <a href="javascript:void(0)" class="px-2"><i class="ti-facebook"></i></a>
+                        <a href="javascript:void(0)" class="px-2"><i class="ti-twitter"></i></a>
+                        <a href="javascript:void(0)" class="px-2"><i class="ti-instagram"></i></a>
+                        <a href="javascript:void(0)" class="px-2"><i class="ti-google"></i></a>
+                    </h6>
+                </div>
+            </div>
+        </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container"> &copy; 2023 - RestaurantManagementSystem - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></div>
     </footer>
+    <!-- End of Page Footer -->
+  
+    <!--public web site js core  -->
+    <script src="~/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="~/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="~/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Pigga js -->
+    <script src="~/assets/js/pigga.js"></script>
+    <!--end public web site js core  -->
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

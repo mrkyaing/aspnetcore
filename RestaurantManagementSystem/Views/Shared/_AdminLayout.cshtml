@@ -26,9 +26,6 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="/home/index" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <partial name="_LoginPartial" />
-                </li>
             </ul>
 
             <!-- Right navbar links -->
@@ -169,7 +166,7 @@
                         <img src="~/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">@User.Identity.Name</a>
+                        <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" class="d-block">@User.Identity.Name</a>
                     </div>
                 </div>
 
@@ -362,6 +359,13 @@
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="nav-item menu">
+                            <i class="nav-link active">
+                                        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                            <button id="logout" type="submit" class="nav-link btn btn-link text-white">Logout</button>
+                                        </form>
+                                    </i>
                         </li>
                     </ul>
                 </nav>

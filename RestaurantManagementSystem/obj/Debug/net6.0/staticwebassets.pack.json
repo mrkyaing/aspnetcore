@@ -9,6 +9,598 @@
       "PackagePath": "staticwebassets\\ReportFiles\\EmployeeReport.rdlc"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\css\\pigga.css",
+      "PackagePath": "staticwebassets\\assets\\css\\pigga.css"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\about-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\about-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\about-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\about-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\about-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\about-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\about-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\about-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\avatar-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\avatar-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\avatar-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\avatar.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\avatar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\chef-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\chef-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\chef-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\chef-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\chef-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\chef-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\contact.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\contact.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\dish-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\dish-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\dish-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\dish-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\dish-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\dish-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\dish-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\dish-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\dish-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\dish-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\dish-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\dish-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\header.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\header.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\logo.svg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\navbar-brand.svg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\navbar-brand.svg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\section.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\section.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\style-1.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\style-1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\style-2.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\style-2.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\style-3.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\style-3.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\imgs\\style-4.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\style-4.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\js\\pigga.js",
+      "PackagePath": "staticwebassets\\assets\\js\\pigga.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\abstracts\\_mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\abstracts\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\abstracts\\_utilities.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\abstracts\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\abstracts\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\abstracts\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\base\\_reset.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\base\\_reset.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\base\\_typography.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\base\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\components\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\components\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\components\\_list.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_list.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\components\\_navbar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\components\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\components\\_progressbar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_progressbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\components\\_table.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_table.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\layout\\_header.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\layout\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\layout\\_sections.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\layout\\_sections.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\pigga.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\pigga.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_alert.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_badge.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_button-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_card.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_carousel.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_close.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_code.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_code.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_custom-forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_custom-forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_functions.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_grid.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_images.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_input-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_jumbotron.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_jumbotron.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_list-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_media.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_media.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_modal.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_nav.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_navbar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_popover.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_print.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_print.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_progress.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_reboot.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_root.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_spinners.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_tables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_toasts.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_transitions.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_type.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_utilities.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_float.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_size.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-hide.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-hide.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_visibility.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\mixins\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_align.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_align.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_background.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_borders.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_borders.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_display.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_embed.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_embed.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_flex.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_flex.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_float.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_overflow.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_overflow.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_position.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_screenreaders.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_screenreaders.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_shadows.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_shadows.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_sizing.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_sizing.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_spacing.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_spacing.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_text.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_visibility.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\utilities\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\scss\\vendors\\bootstrap-4.3.1\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\vendors\\bootstrap-4.3.1\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.affix.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.affix.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\bootstrap\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.min.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.min.map"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.slim.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.slim.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\jquery\\jquery-3.4.1.slim.min.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery-3.4.1.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\themify-icons\\css\\themify-icons.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\css\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\themify-icons\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\themify-icons\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\themify-icons\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\assets\\vendors\\themify-icons\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\assets\\vendors\\themify-icons\\fonts\\themify.woff"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
