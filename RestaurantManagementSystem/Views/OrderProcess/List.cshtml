@@ -38,8 +38,11 @@
                         <td>@item.Table.No</td>
                         <td>@item.Employee.Name</td>
                         <td>
-                            <a href="/Invoice/Entry?OrderId=@item.Id" class="btn btn-success" role="button">  Make Payment</a>
                             <a href="/orderprocess/edit?Id=@item.Id" class="btn btn-warning" role="button">Detail</a>
+                            @if (User.IsInRole("Admin")) {
+                                <a href="/Invoice/Entry?OrderId=@item.Id" class="btn btn-success" role="button">Make Payment</a>
+                            }
+                            
                             <a href="/orderprocess/edit?Id=@item.Id" class="btn btn-primary" role="button">Edit</a>
                             <a href="/orderprocess/delete?Id=@item.Id" onclick=" return confirm('are you sure to delete this record?');" class="btn btn-danger" role="button">Delete</a>
                         </td>
@@ -260,7 +263,7 @@
             $.each($("#detailsTable tbody tr"), function () {
             orderDetails.push({
                 'ProductId': $(this).find('td:eq(0)').html(),
-                'Quantity': $(this).find('td:eq(2)').html(),
+                'Quantity': $(this).find('td:eq(3)').html(),
                 'Remark': $(this).find('td:eq(4)').html(),
             });
         });
@@ -288,7 +291,7 @@
             }
         });
     });//end of  saveOrder click
-
+  
     $(document).on('click', 'a.deleteItem', function (e) {
         e.preventDefault();
         var $self = $(this);
@@ -347,13 +350,13 @@
                     console.log(err);
                 });
             });
-   //drop down option
+   //product select option change function
     $("#txtProductId").change(function () {
         $.ajax({
             type: 'get',
             url: '/OrderProcess/GetUnitPriceByProductId',
             dataType: 'json',
-            data: { id: $("#txtProductId").val() },
+            data: { productId: $("#txtProductId").val() },
             success: function (data) {
                 var unitPrice=JSON.stringify(data);
                 $("#txtUnitPrice").val(unitPrice);
@@ -361,10 +364,8 @@
         error: function (ex) {
             var r = jQuery.parseJSON(response.responseText);
             alert("Message: " + r.Message);
-            alert("StackTrace: " + r.StackTrace);
-            alert("ExceptionType: " + r.ExceptionType);
         }
-            });
+});
     });
 $(document).ready(function () {
         $('#ordersTable').DataTable();

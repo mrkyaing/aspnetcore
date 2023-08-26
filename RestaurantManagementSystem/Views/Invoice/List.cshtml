@@ -35,7 +35,6 @@
                 <td>@product.TotalAmount</td>
                 <td>@product.EmployeeId</td>
                 <td>
-                    <a href="/invoice/pay?Id=@product.Id" onclick=" return confirm('are you sure to pay this record?');" class="btn btn-danger" role="button">Pay</a> 
                     <a href="/invoice/edit?Id=@product.Id" class="btn btn-success" role="button">edit</a>
                     <a href="/invoice/delete?Id=@product.Id" onclick=" return confirm('are you sure to delete this record?');" class="btn btn-danger" role="button">delete</a>
                 </td>

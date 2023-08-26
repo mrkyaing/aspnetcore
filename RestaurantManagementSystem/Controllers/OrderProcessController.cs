@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.DAO;
@@ -7,6 +8,7 @@ using RestaurantManagementSystem.Models.ViewModels;
 using RestaurantManagementSystem.Utilities;
 
 namespace RestaurantManagementSystem.Controllers {
+    [Authorize]
     public class OrderProcessController : Controller {
         private readonly RMSDBContext rMSDBContext;
         private readonly IMapper _mapper;
@@ -46,10 +48,12 @@ namespace RestaurantManagementSystem.Controllers {
             return View(viewModels); 
         }
         public IActionResult Entry() { return View(); }
-        public JsonResult GetUnitPriceByProductId(string id) {
-            var Product=rMSDBContext.Products.Where(x=>x.Id.Equals(id)).FirstOrDefault();
+       
+        public JsonResult GetUnitPriceByProductId(string productId) {
+            var Product=rMSDBContext.Products.Where(x=>x.Id.Equals(productId)).FirstOrDefault();
             return Json(Product.UnitPrice);
         }
+
         [HttpPost]
         public JsonResult Entry(OrderViewModel anOrder) {
             try {
@@ -60,7 +64,7 @@ namespace RestaurantManagementSystem.Controllers {
                     EmployeeId= anOrder.EmployeeId,
                     IsParcel=anOrder.IsParcel=="Yes"?true:false,
                     Status=anOrder.Status,
-                    IsPaid=false
+                    IsPaid=false//is paid is always false when order create process
                 };
                 //adding the record to the Orders of db context
                 rMSDBContext.Orders.Add(entity);
