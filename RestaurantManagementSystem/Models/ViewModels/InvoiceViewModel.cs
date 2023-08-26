@@ -7,6 +7,6 @@
         public string OrderId { get; set; }
         public decimal TotalAmount { get; set; }
         public string EmployeeId { get; set; }
-        public  string TableId { get; set; }
+        public string TableNo { get; set; }
     }
 }

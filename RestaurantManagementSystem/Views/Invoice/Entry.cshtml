@@ -7,10 +7,10 @@
     <hr />
     <form action="/invoice/entry" method="post">
         <div class="mb-3">
-            <input type="hidden" name="OrderId" value="@Model.OrderId" /> <!--hidden value to update the record -->
-            <input type="hidden" name="TableId" value="@Model.TableId" /> <!--hidden value to update the record -->
+            <input type="hidden" name="OrderId" value="@Model.OrderId" /> <!--hidden OrderId value to pay the record -->
+
             <label class="form-label">Invoice No</label>
-            <input class="form-control" type="text" name="No" required value="@Model.No" />
+            <input class="form-control" type="text" name="No" value="@Model.No" required />
         </div>
         <div class="mb-3">
             <label class="form-label">Order No</label>
@@ -21,6 +21,10 @@
             <input class="form-control" type="number" name="TotalAmount" value="@Model.TotalAmount" required readonly/>
         </div>
         <div class="mb-3">
+            <label class="form-label">Pay for Table No</label>
+            <input class="form-control" type="text" value="@Model.TableNo" required readonly />
+        </div>
+        <div class="mb-3">
             <label class="form-label">Payment With</label>
             <select class="form-control" name="PaymentWith">
                 <option value="kpay">KPay</option>
@@ -29,10 +33,10 @@
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">Collector Cashier Employee</label>
+            <label class="form-label">Collector Cashier</label>
             <select class="form-control" name="EmployeeId">
-                @foreach (var p in ViewBag.Employees) {
-                    <option value="@p.Id">@p.Code :@p.Name</option>
+                @foreach (var e in ViewBag.Employees) {
+                    <option value="@e.Id">@e.Name</option>
                 }
             </select>
         </div>
