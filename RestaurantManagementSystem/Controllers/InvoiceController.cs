@@ -72,13 +72,13 @@ namespace RestaurantManagementSystem.Controllers {
                 var order=_rMSDBContext.Orders.Where(x=>x.Id==viewModel.OrderId).FirstOrDefault();
                 if (order is not null) {
                     order.IsPaid = true;
-                    _rMSDBContext.Entry(order).State = EntityState.Modified;//editing the record to the products of db context
+                    _rMSDBContext.Entry(order).State = EntityState.Modified;//editing the record to the Orders of db context
                 }
 
                 var table = _rMSDBContext.Tables.Where(x => x.Id == order.TableId).SingleOrDefault();
                 if(table is not null) {
                     table.IsAvailable = true;
-                    _rMSDBContext.Entry(table).State = EntityState.Modified;//editing the record to the products of db context
+                    _rMSDBContext.Entry(table).State = EntityState.Modified;//editing the record to the Tables of db context
                 }
                 _rMSDBContext.SaveChanges();// actually save to the database 
                 TempData["Msg"] = "Invoice Payment is created successfully";
