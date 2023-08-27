@@ -175,7 +175,9 @@
                         <input type="hidden" id="detailId" />
                         <div class="col-md-6">
                             <label class="control-label col-md-3"> Product Name</label>
+
                             <select class="form-control" id="txtProductId">
+                                <option value="selectone" disabled selected>--select one--</option>
                                 @foreach (var p in ViewBag.Products) {
                                     <option value="@p.Id">@p.Name</option>
                                 }
