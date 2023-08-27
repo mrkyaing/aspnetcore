@@ -120,6 +120,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/OrderProcess/CheckOrderAndOrderDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9jZXNzXENoZWNrT3JkZXJBbmRPcmRlckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/OrderProcess/Entry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9jZXNzXEVudHJ5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

@@ -4,6 +4,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <div class="panel panel-default">
+    @if (TempData["Msg"] != null) {
+        <div class="text-info">
+            <b>@TempData["Msg"] </b>
+        </div>
+    }
     <div class="panel-heading">
         <div class="row">
             <h2 class="panel-title pull-left">
@@ -38,7 +43,7 @@
                         <td>@item.Table.No</td>
                         <td>@item.Employee.Name</td>
                         <td>
-                            <a href="/orderprocess/edit?Id=@item.Id" class="btn btn-warning" role="button">Detail</a>
+                            <a href="/orderprocess/CheckOrderAndOrderDetails?orderId=@item.Id" class="btn btn-warning" role="button">Detail</a>
                             @if (User.IsInRole("Admin")) {
                                 <a href="/Invoice/Entry?OrderId=@item.Id" class="btn btn-success" role="button">Make Payment</a>
                             }

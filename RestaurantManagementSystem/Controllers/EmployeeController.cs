@@ -51,7 +51,6 @@ namespace RestaurantManagementSystem.Controllers {
                 //DTO >> Data Transfer Object 
                 var entity = _mapper.Map<EmployeeEntity>(viewModel);
                 entity.Id = Guid.NewGuid().ToString();//for new id when uer create the record 36 char GUID  , UUID 
-                entity.Ip = NetworkHelper.GetLocalIp();
                 entity.ProfileImageUrl = "c:\\ok.jpeg";
                 _rMSDBContext.Employees.Add(entity);//adding the record to the products of db context
                 _rMSDBContext.SaveChanges();// actually save to the database 
@@ -102,7 +101,6 @@ namespace RestaurantManagementSystem.Controllers {
             try {
                 //DTO >> Data Transfer Object 
                 var entity = _mapper.Map<EmployeeEntity>(viewModel);
-                entity.Ip = NetworkHelper.GetLocalIp();
                 entity.UpdatedAt = DateTime.Now;
                 entity.ProfileImageUrl = "c:\\ok.jpeg";
                 _rMSDBContext.Entry(entity).State = EntityState.Modified;//editing the record to the products of db context

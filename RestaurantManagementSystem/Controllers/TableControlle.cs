@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.DAO;
 using RestaurantManagementSystem.Models;
 using RestaurantManagementSystem.Models.ViewModels;
-using RestaurantManagementSystem.Utilities;
 using System.Data;
 
 namespace RestaurantManagementSystem.Controllers {
@@ -28,11 +27,8 @@ namespace RestaurantManagementSystem.Controllers {
         [HttpPost]
         public IActionResult Entry(TableViewModel viewModel) {
             try {
-                //DTO >> Data Transfer Object 
-                //var entity = mapper.Map<TableEntity>(viewModel);
                 var entity = new TableEntity();
                 entity.No = viewModel.No;
-                entity.Id = Guid.NewGuid().ToString();
                 entity.Status=viewModel.Status;
                 entity.AvailableCapacityPerson=viewModel.AvailableCapacityPerson;
                 entity.IsAvailable = viewModel.IsAvailable.Equals("y") ? true : false;

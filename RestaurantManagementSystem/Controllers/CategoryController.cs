@@ -34,8 +34,7 @@ namespace RestaurantManagementSystem.Controllers {
                 {
                     Id = Guid.NewGuid().ToString(),//for new id when uer create the record 36 char GUID  , UUID 
                     Name = viewModel.Name,//c101 
-                    Code = viewModel.Code,
-                    Ip = NetworkHelper.GetLocalIp()
+                    Code = viewModel.Code
                 };
                 rMSDBContext.Categories.Add(categoryEntity);//adding the record to the products of db context
                 rMSDBContext.SaveChanges();// actually save to the database 
@@ -82,8 +81,7 @@ namespace RestaurantManagementSystem.Controllers {
                 {
                     Id = viewModel.Id,//not to generate new id because this is update processs 
                     Name = viewModel.Name,//c101
-                    Code = viewModel.Code,
-                    Ip = NetworkHelper.GetLocalIp()
+                    Code = viewModel.Code
                 };
                 rMSDBContext.Entry(entity).State = EntityState.Modified;//editing the record to the products of db context
                 rMSDBContext.SaveChanges();// actually update to the database 

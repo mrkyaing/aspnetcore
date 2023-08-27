@@ -26,7 +26,6 @@ namespace RestaurantManagementSystem.Controllers {
             try {
                 //DTO >> Data Transfer Object 
                 var entity = mapper.Map<PositionEntity>(viewModel);
-                entity.Id = Guid.NewGuid().ToString();
                 rMSDBContext.Positions.Add(entity);//adding the record to the products of db context
                 rMSDBContext.SaveChanges();// actually save to the database 
                 TempData["Msg"] = "1 record is created successfully";
@@ -61,7 +60,6 @@ namespace RestaurantManagementSystem.Controllers {
         [HttpPost]
         public IActionResult Update(PositionViewModel viewModel) {
             try {
-                //DTO >> Data Transfer Object 
                 var entity = mapper.Map<PositionEntity>(viewModel);
                 rMSDBContext.Entry(entity).State = EntityState.Modified;//editing the record to the products of db context
                 rMSDBContext.SaveChanges();// actually update to the database 
