@@ -22,6 +22,12 @@ namespace RestaurantManagementSystem.Controllers {
                     UnitPrice=s.UnitPrice,
                     Category=s.Category,
                 }).ToList();
+            ViewData["AvailableCategoryes"] = _rMSDBContext.Categories.Select(x => new CategoryViewModel
+            {
+                Code=x.Code,
+                Name=x.Name,
+                ProductCounts=x.Products.Count()
+            }).ToList();
             return View();
         }
 

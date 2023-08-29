@@ -5,5 +5,6 @@ namespace RestaurantManagementSystem.Models {
     public class CategoryEntity:BaseEntity {
         public string Code { get; set; }
         public string Name { get; set; }
+        public virtual IList<ProductEntity> Products { get; set; }
     }
 }
