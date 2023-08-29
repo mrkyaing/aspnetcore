@@ -32,6 +32,7 @@
                         <th scope="col">Category</th>
                         <th scope="col">Quantity </th>
                         <th scope="col">UnitPrice</th>
+                        <th scope="col">Remarks</th>
                         <th scope="col">Total</th>
                     </tr>
                 </thead>
@@ -42,6 +43,7 @@
                     @foreach (var item in Model.orderDetails) {
                         decimal total = 0;
                         var quantity = @item.Quantity;
+                        string remarks = @item.Remark;
                         foreach (var p in item.Products) {
                             total = quantity * p.UnitPrice;
                             <tr>
@@ -51,6 +53,7 @@
                                 <td>@p.Category.Name</td>
                                 <td>@quantity</td>
                                 <td>@p.UnitPrice</td>
+                                <td>@remarks</td>
                                 <td>@total</td>
                             </tr>
                             index++;

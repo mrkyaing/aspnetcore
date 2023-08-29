@@ -47,7 +47,6 @@
                             @if (User.IsInRole("Admin")) {
                                 <a href="/Invoice/Entry?OrderId=@item.Id" class="btn btn-success" role="button">Make Payment</a>
                             }
-                            
                             <a href="/orderprocess/edit?Id=@item.Id" class="btn btn-primary" role="button">Edit</a>
                             <a href="/orderprocess/delete?Id=@item.Id" onclick=" return confirm('are you sure to delete this record?');" class="btn btn-danger" role="button">Delete</a>
                         </td>
@@ -271,7 +270,7 @@
             orderDetails.push({
                 'ProductId': $(this).find('td:eq(0)').html(),
                 'Quantity': $(this).find('td:eq(3)').html(),
-                'Remark': $(this).find('td:eq(4)').html(),
+                'Remark': $(this).find('td:eq(5)').html(),
             });
         });
 

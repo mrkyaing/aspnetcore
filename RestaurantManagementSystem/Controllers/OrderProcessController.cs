@@ -98,33 +98,22 @@ namespace RestaurantManagementSystem.Controllers {
             }
         }
         public IActionResult CheckOrderAndOrderDetails(string orderId) {
-            OrderViewModel orderAndOrderDetails = (from o in rMSDBContext.Orders
-                                                                            join od in rMSDBContext.OrderDetails
-                                                                            on o.Id equals od.OrderId
-                                                                            join p in rMSDBContext.Products
-                                                                            on od.ProductId equals p.Id
-                                                                            join c in rMSDBContext.Categories
-                                                                            on p.CategoryId equals c.Id
-                                                                            where o.Id == orderId
-                                                                             select new OrderViewModel{
-                                                                    No = o.No,
-                                                                    TableNo = o.Table.No,
-                                                                    IsParcel = o.IsParcel.Equals(true) ? "YES" : "NO",
-                                                                    EmployeeNo = o.Employee.Code + ":" + o.Employee.Name,
-                                                                    orderDetails =new List<OrderDetailViewModel>(){
-                                                                    new OrderDetailViewModel{
-                                                                           Products = new List<ProductViewModel>(){
-                                                                            new ProductViewModel {
-                                                                               Code=p.Code,
-                                                                               Name=p.Name,
-                                                                               Category=p.Category,
-                                                                               UnitPrice=p.UnitPrice
-                                                                            }
-                                                                        },
-                                                                        Quantity=od.Quantity,
-                                                                    }//end of OrderDetailViewModel
-                                                                    }.ToArray()//end of OrderDetailViewModel List
-                                                                }).SingleOrDefault();//end of orderAndOrderDetails
+            OrderViewModel orderAndOrderDetails=rMSDBContext.Orders.Where(x=>x.Id==orderId).Select(o=>new OrderViewModel{
+                No = o.No,
+                TableNo = o.Table.No,
+                IsParcel = o.IsParcel.Equals(true) ? "YES" : "NO",
+                EmployeeNo = o.Employee.Code + ":" + o.Employee.Name,
+                orderDetails=rMSDBContext.OrderDetails.Where(od=>od.OrderId==orderId).Select(s=>new OrderDetailViewModel {
+                      Products=rMSDBContext.Products.Where(p=>p.Id==s.ProductId).Select(pp=>new ProductViewModel{
+                       Code = pp.Code,
+                       Name = pp.Name,
+                       Category = pp.Category,
+                       UnitPrice = pp.UnitPrice
+                   }).ToList(),
+                  Quantity=s.Quantity,
+                  Remark=s.Remark,
+                }).ToArray()
+            }).SingleOrDefault();
             return View(orderAndOrderDetails);
         }
 
