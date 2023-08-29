@@ -246,6 +246,7 @@ else {
                 <h6 class="section-subtitle text-center">Special Things</h6>
                 <h3 class="section-title mb-6 pb-3 text-center">Today Special-ယနေ့အတွက်ထူးရှယ်များ</h3>
                 <div class="row">
+                @foreach (var p in ViewBag.TodaySpecialProducts) {
                     <div class="col-md-6 mb-4">
                         <a href="javascrip:void(0)" class="custom-list">
                             <div class="img-holder">
@@ -253,95 +254,17 @@ else {
                             </div>
                             <div class="info">
                                 <div class="head clearfix">
-                                    <h5 class="title float-left">မြန်မာအစားအစာ</h5>
-                                    <p class="float-right text-primary">$25</p>
+                                    <h5 class="title float-left">@p.Category.Name</h5>
+                                    <p class="float-right text-primary">@p.UnitPrice (MMK)</p>
                                 </div>
                                 <div class="body">
-                                    <p>မုန့်ဟင်းခါး</p>
+                                    <p>@p.Name</p>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-6 mb-4">
-                        <a href="javascrip:void(0)" class="custom-list">
-                            <div class="img-holder">
-                                <img src="~/assets/imgs/dish-2.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
-                            </div>
-                            <div class="info">
-                                <div class="head clearfix">
-                                    <h5 class="title float-left">ရှမ်းအစားအစာ</h5>
-                                    <p class="float-right text-primary">$35</p>
-                                </div>
-                                <div class="body">
-                                    <p>ကွေ့တယို</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <a href="javascrip:void(0)" class="custom-list">
-                            <div class="img-holder">
-                                <img src="~/assets/imgs/dish-3.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
-                            </div>
-                            <div class="info">
-                                <div class="head clearfix">
-                                    <h5 class="title float-left">Coffee</h5>
-                                    <p class="float-right text-primary">$18</p>
-                                </div>
-                                <div class="body">
-                                    <p>Ice Coffee</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <a href="javascrip:void(0)" class="custom-list">
-                            <div class="img-holder">
-                                <img src="~/assets/imgs/dish-4.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
-                            </div>
-                            <div class="info">
-                                <div class="head clearfix">
-                                    <h5 class="title float-left">Coffee</h5>
-                                    <p class="float-right text-primary">$30</p>
-                                </div>
-                                <div class="body">
-                                    <p>Hot Coffee</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <a href="javascrip:void(0)" class="custom-list">
-                            <div class="img-holder">
-                                <img src="~/assets/imgs/dish-5.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
-                            </div>
-                            <div class="info">
-                                <div class="head clearfix">
-                                    <h5 class="title float-left">တရုတ်အစားအစာ</h5>
-                                    <p class="float-right text-primary">$24</p>
-                                </div>
-                                <div class="body">
-                                    <p>ပသျှစ်ထမင်းကြော်</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <a href="javascrip:void(0)" class="custom-list">
-                            <div class="img-holder">
-                                <img src="~/assets/imgs/dish-6.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
-                            </div>
-                            <div class="info">
-                                <div class="head clearfix">
-                                    <h5 class="title float-left">တရုတ်အစားအစာ</h5>
-                                    <p class="float-right text-primary">$44</p>
-                                </div>
-                                <div class="body">
-                                    <p>မာလာရှမ်းကောပွဲကြီးဗမ်း</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                }
+                 
                 </div>
             </div>
         </section>
@@ -355,72 +278,19 @@ else {
                 <div class="card bg-light">
                     <div class="card-body px-4 pb-4 text-center">
                         <div class="row text-left">
+                        @foreach (var c in ViewData["AvailableCategoryes"] as IList<CategoryViewModel>) {
                             <div class="col-md-6 my-4">
                                 <a href="#" class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
                                     <div class="d-flex">
                                         <div class="flex-grow-1">
-                                            Dolorem Exmaiores
-                                            <p class="mt-1 mb-0">Numquam dolor dolores molestiae maiores quidem.</p>
+                                           @c.Code
+                                            <p class="mt-1 mb-0">Available Products : @c.ProductCounts</p>
                                         </div>
-                                        <h6 class="float-right text-primary">$12</h6>
+                                        <h6 class="float-right text-primary">@c.Name</h6>
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-6 my-4">
-                                <a href="#" class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
-                                    <div class="d-flex">
-                                        <div class="flex-grow-1">
-                                            Aperiam incidunt dicta
-                                            <p class="mt-1 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
-                                        <h6 class="float-right text-primary">$23</h6>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-6 my-4">
-                                <a href="#" class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
-                                    <div class="d-flex">
-                                        <div class="flex-grow-1">
-                                            Animi repellat labore
-                                            <p class="mt-1 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
-                                        <h6 class="float-right text-primary">$32</h6>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-6 my-4">
-                                <a href="#" class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
-                                    <div class="d-flex">
-                                        <div class="flex-grow-1">
-                                            Quo ipsum similique
-                                            <p class="mt-2 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
-                                        <h6 class="float-right text-primary">$17</h6>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-6 my-4">
-                                <a href="#" class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
-                                    <div class="d-flex">
-                                        <div class="flex-grow-1">
-                                            Est nam tempore
-                                            <p class="mt-2 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
-                                        <h6 class="float-right text-primary">$21</h6>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-6 my-4">
-                                <a href="#" class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
-                                    <div class="d-flex">
-                                        <div class="flex-grow-1">
-                                            Nesciunt ab veniam
-                                            <p class="mt-2 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
-                                        <h6 class="float-right text-primary">$10</h6>
-                                    </div>
-                                </a>
-                            </div>
+                        }
                         </div>
                         <a href="#book-table" class="btn btn-primary mt-4">Book A Table</a>
                     </div>
