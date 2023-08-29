@@ -1,19 +1,29 @@
-﻿@model PositionViewModel
+﻿@model TableViewModel
 <head>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 </head>
-<div class="container">
+<div class="panel panel-default">
     <h1>Table Edit</h1>
     <hr />
-    <form action="/position/update" method="post">
-        <input type="hidden" name="Id" value="@Model.Id" /> <!--hidden value to update the record -->
+    <form action="/table/update" method="post">
         <div class="mb-3">
-            <label class="form-label">Code</label>
-            <input class="form-control" type="text" name="Code" required value="@Model.Code"/>
+            <label class="form-label">Table No</label>
+            <input class="form-control" type="text" name="No"  value="@Model.No" required />
         </div>
         <div class="mb-3">
-            <label class="form-label">Name</label>
-            <input class="form-control" type="text" name="Name" required value="@Model.Name"/>
+            <label class="form-label">Is Available</label>
+            <select class="form-control" name="IsAvailable">
+                <option value="y">Yes</option>
+                <option value="n">No</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Available Capacity Person</label>
+            <input class="form-control" type="number" name="AvailableCapacityPerson" required value="@Model.AvailableCapacityPerson" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Status</label>
+            <input class="form-control" type="text" name="Status" required value="@Model.Status" />
         </div>
         <input class="btn btn-success" type="submit" value="Update">
     </form>

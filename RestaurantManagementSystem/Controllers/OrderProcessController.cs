@@ -6,6 +6,7 @@ using RestaurantManagementSystem.DAO;
 using RestaurantManagementSystem.Models;
 using RestaurantManagementSystem.Models.ViewModels;
 using RestaurantManagementSystem.Utilities;
+using System.Collections.Generic;
 
 namespace RestaurantManagementSystem.Controllers {
     [Authorize]
@@ -96,16 +97,44 @@ namespace RestaurantManagementSystem.Controllers {
                 return Json(new { response = "error" });
             }
         }
+        public IActionResult CheckOrderAndOrderDetails(string orderId) {
+            OrderViewModel orderAndOrderDetails=rMSDBContext.Orders.Where(x=>x.Id==orderId).Select(o=>new OrderViewModel{
+                No = o.No,
+                TableNo = o.Table.No,
+                IsParcel = o.IsParcel.Equals(true) ? "YES" : "NO",
+                EmployeeNo = o.Employee.Code + ":" + o.Employee.Name,
+                orderDetails=rMSDBContext.OrderDetails.Where(od=>od.OrderId==orderId).Select(s=>new OrderDetailViewModel {
+                      Products=rMSDBContext.Products.Where(p=>p.Id==s.ProductId).Select(pp=>new ProductViewModel{
+                       Code = pp.Code,
+                       Name = pp.Name,
+                       Category = pp.Category,
+                       UnitPrice = pp.UnitPrice
+                   }).ToList(),
+                  Quantity=s.Quantity,
+                  Remark=s.Remark,
+                }).ToArray()
+            }).SingleOrDefault();
+            return View(orderAndOrderDetails);
+        }
+
         public IActionResult Delete(string Id) {
             try {
-                var order = rMSDBContext.Orders.Where(x => x.Id.Equals(Id)).SingleOrDefault();
-                var orderDetails = rMSDBContext.OrderDetails.Where(x => x.OrderId.Equals(Id)).ToList();
+                var order = rMSDBContext.Orders.Where(x => x.Id.Equals(Id)).SingleOrDefault(); //getting selected the order
+                
+                var orderDetails = rMSDBContext.OrderDetails.Where(x => x.OrderId.Equals(Id)).ToList(); //selecting the order detail according to order id 
                 if (order == null || orderDetails.Count<0) {
-                    TempData["Msg"] = "There is no recrod that you select.";
+                    TempData["Msg"] = "There is no recrod that your selected order.";
+                    return RedirectToAction("List");
                 }
-                rMSDBContext.OrderDetails.RemoveRange(orderDetails);
-                rMSDBContext.Orders.Remove(order);// collect the data to remove
-                rMSDBContext.SaveChanges();// remove the record from the database 
+                rMSDBContext.OrderDetails.RemoveRange(orderDetails);//remove order details
+                rMSDBContext.Orders.Remove(order);//remove the order
+
+                var table = rMSDBContext.Tables.Where(x => x.Id.Equals(order.TableId)).SingleOrDefault();
+                if (table is not null) {
+                    table.IsAvailable = true;
+                    rMSDBContext.Entry(table).State = EntityState.Modified;
+                }
+                rMSDBContext.SaveChanges();//finally remove the records(Order & order details ) from the database 
                 TempData["Msg"] = "delete process is completed successfully.";
             }
             catch (Exception e) {

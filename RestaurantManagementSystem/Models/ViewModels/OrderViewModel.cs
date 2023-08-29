@@ -7,7 +7,9 @@
         public string? Status { get; set; }
         public string EmployeeId { get; set; }
         public virtual EmployeeEntity Employee { get; set; }
+        public string EmployeeNo { get; set; }
         public string TableId { get; set; }
+        public string TableNo { get; set; }
         public virtual TableEntity Table { get; set; }
         public virtual  OrderDetailViewModel[] orderDetails { get;set; }
     }

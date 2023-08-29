@@ -12,5 +12,7 @@ namespace RestaurantManagementSystem.Utilities {
             }
             throw new Exception("No network adapters with an IPv4 address in the system!");
         }
+
+
     }
 }

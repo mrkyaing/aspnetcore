@@ -45,8 +45,7 @@ namespace RestaurantManagementSystem.Controllers {
                     UnitPrice = productViewModel.UnitPrice,
                     IsAvailable = productViewModel.IsAvailable.Equals("y")?true : false,
                     IsTodaySpecial = productViewModel.IsTodaySpecial.Equals("y") ? true : false,
-                    CategoryId = productViewModel.CategoryId,
-                    Ip = NetworkHelper.GetLocalIp(),
+                    CategoryId = productViewModel.CategoryId
                 };
                 rMSDBContext.Products.Add(product);//adding the record to the products of db context
                 rMSDBContext.SaveChanges();// actually save to the database 
@@ -101,8 +100,7 @@ namespace RestaurantManagementSystem.Controllers {
                     IsAvailable = productViewModel.IsAvailable.Equals("y") ? true : false,
                     IsTodaySpecial = productViewModel.IsTodaySpecial.Equals("y") ? true : false,
                     CategoryId = productViewModel.CategoryId,
-                    UpdatedAt=DateTime.Now,
-                    Ip =NetworkHelper.GetLocalIp()
+                    UpdatedAt=DateTime.Now
                 };
                 rMSDBContext.Entry(product).State=EntityState.Modified;//editing the record to the products of db context
                 rMSDBContext.SaveChanges();// actually update to the database 

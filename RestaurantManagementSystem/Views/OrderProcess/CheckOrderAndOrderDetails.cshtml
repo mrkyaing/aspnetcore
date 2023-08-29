@@ -1,0 +1,71 @@
+﻿@model OrderViewModel
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<div class="container">
+    <h1>Order and Order Detail Information</h1>
+    <form action="/orderprocess/list" method="get">
+        <div class="mb-3">
+            <label class="form-label">Order No</label>
+            <input class="form-control" type="text" value="@Model.No"  readonly />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Table</label>
+            <input class="form-control" type="text" value="@Model.TableNo" readonly />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Parcel</label>
+            <input class="form-control" type="text" value="@Model.IsParcel" readonly />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Responsiable Employee</label>
+            <input class="form-control" type="text" value="@Model.EmployeeNo" readonly />
+        </div>
+
+        <div class="mb-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Product No</th>
+                        <th scope="col">Product Name </th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Quantity </th>
+                        <th scope="col">UnitPrice</th>
+                        <th scope="col">Remarks</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int index = 1;
+                    }
+                    @foreach (var item in Model.orderDetails) {
+                        decimal total = 0;
+                        var quantity = @item.Quantity;
+                        string remarks = @item.Remark;
+                        foreach (var p in item.Products) {
+                            total = quantity * p.UnitPrice;
+                            <tr>
+                                <th scope="row">@index</th>
+                                <td>@p.Code</td>
+                                <td>@p.Name</td>
+                                <td>@p.Category.Name</td>
+                                <td>@quantity</td>
+                                <td>@p.UnitPrice</td>
+                                <td>@remarks</td>
+                                <td>@total</td>
+                            </tr>
+                            index++;
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-success" type="submit" value="Close">
+        </div>
+    </form>
+
+</div>

@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.DAO;
 using RestaurantManagementSystem.Models;
 using RestaurantManagementSystem.Models.ViewModels;
-using RestaurantManagementSystem.Utilities;
 using System.Data;
 
 namespace RestaurantManagementSystem.Controllers {
@@ -28,11 +27,8 @@ namespace RestaurantManagementSystem.Controllers {
         [HttpPost]
         public IActionResult Entry(TableViewModel viewModel) {
             try {
-                //DTO >> Data Transfer Object 
-                //var entity = mapper.Map<TableEntity>(viewModel);
                 var entity = new TableEntity();
                 entity.No = viewModel.No;
-                entity.Id = Guid.NewGuid().ToString();
                 entity.Status=viewModel.Status;
                 entity.AvailableCapacityPerson=viewModel.AvailableCapacityPerson;
                 entity.IsAvailable = viewModel.IsAvailable.Equals("y") ? true : false;
@@ -48,11 +44,11 @@ namespace RestaurantManagementSystem.Controllers {
         [Authorize(Roles = "Admin")]
         public IActionResult Delete(string Id) {
             try {
-                var entity = rMSDBContext.Positions.Where(x => x.Id.Equals(Id)).SingleOrDefault();
+                var entity = rMSDBContext.Tables.Where(x => x.Id.Equals(Id)).SingleOrDefault();
                 if (entity == null) {
                     TempData["Msg"] = "There is no recrod that you select.";
                 }
-                rMSDBContext.Positions.Remove(entity);// collect the data to remove
+                rMSDBContext.Tables.Remove(entity);// collect the data to remove
                 rMSDBContext.SaveChanges();// remove the record from the database 
                 TempData["Msg"] = "delete process is completed successfully.";
             }
@@ -63,15 +59,14 @@ namespace RestaurantManagementSystem.Controllers {
         }
         [Authorize(Roles = "Admin")]
         public IActionResult Edit(string Id) {
-            var viewModel =mapper.Map<PositionViewModel>( rMSDBContext.Positions.Where(x => x.Id.Equals(Id)).SingleOrDefault());
+            var viewModel =mapper.Map<TableViewModel>( rMSDBContext.Tables.Where(x => x.Id.Equals(Id)).SingleOrDefault());
             return View(viewModel);
         }
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public IActionResult Update(PositionViewModel viewModel) {
+        public IActionResult Update(TableViewModel viewModel) {
             try {
-                //DTO >> Data Transfer Object 
-                var entity = mapper.Map<PositionEntity>(viewModel);
+                var entity = mapper.Map<TableEntity>(viewModel);
                 rMSDBContext.Entry(entity).State = EntityState.Modified;//editing the record to the products of db context
                 rMSDBContext.SaveChanges();// actually update to the database 
                 TempData["Msg"] = "update process is completed successfully.";
