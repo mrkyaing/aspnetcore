@@ -8,18 +8,25 @@ using RestaurantManagementSystem.Utilities;
 using System.Text;
 using RMSReportHelpers;
 using Microsoft.Reporting.NETCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace RestaurantManagementSystem.Controllers {
     public class EmployeeController : Controller {
         private readonly RMSDBContext _rMSDBContext;
         private readonly IWebHostEnvironment _webHostEnvironment;//to be read rdlc file under wwwroot folder/reportFiles
         private readonly IMapper _mapper;
+        private readonly UserManager<IdentityUser> _userManager;
         //constructor injection  for RMSDBContext
-        public EmployeeController(RMSDBContext context,IMapper mapper, IWebHostEnvironment webHostEnvironment) {
+        public EmployeeController(RMSDBContext context,IMapper mapper, 
+            IWebHostEnvironment webHostEnvironment
+            ,UserManager<IdentityUser> userManager) {
             _rMSDBContext = context;
             _mapper = mapper;
             _webHostEnvironment = webHostEnvironment;
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            _userManager = userManager;
         }
         public IActionResult List() {
             var i = 10;
@@ -45,21 +52,42 @@ namespace RestaurantManagementSystem.Controllers {
             return  View();
         }
             [HttpPost]
-        public IActionResult Entry(EmployeeViewModel viewModel) {
+        public  async Task<IActionResult> Entry(EmployeeViewModel viewModel) {
             try {
-              
-                //DTO >> Data Transfer Object 
                 var entity = _mapper.Map<EmployeeEntity>(viewModel);
                 entity.Id = Guid.NewGuid().ToString();//for new id when uer create the record 36 char GUID  , UUID 
                 entity.ProfileImageUrl = "c:\\ok.jpeg";
                 _rMSDBContext.Employees.Add(entity);//adding the record to the products of db context
-                _rMSDBContext.SaveChanges();// actually save to the database 
-                TempData["Msg"] = "1 record is created successfully";
+             
+                //await and asnyc 
+                var user = CreateUser();
+                user.Email =viewModel.Email;
+                user.NormalizedEmail = viewModel.Email;
+                user.UserName = viewModel.Email;//to use login with user name.
+                user.NormalizedUserName = viewModel.Name;
+                //creating the user record 
+                string defaultPassword = "RMS@123welcome";
+                var result = await _userManager.CreateAsync(user,defaultPassword);//xxx@gmail.com,123456
+                if(result.Succeeded) {
+                    _rMSDBContext.SaveChanges();// actually save the employee record to the database 
+                    await _userManager.AddToRoleAsync(user, "Employee");//creating the employee for created user .
+                    TempData["Msg"] = $"1 record is created successfully and you can login with this email :{viewModel.Email} and default password :{defaultPassword}";
+                }
             }
             catch (Exception ex) {
                 TempData["Msg"] = "Error occur when record is created because of " + ex.Message;
             }
             return RedirectToAction("List");
+        }
+        private IdentityUser CreateUser() {
+            try {
+                return Activator.CreateInstance<IdentityUser>();
+            }
+            catch {
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(IdentityUser)}'. " +
+                    $"Ensure that '{nameof(IdentityUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                    $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
+            }
         }
         public IActionResult Delete(string Id) {
             try {

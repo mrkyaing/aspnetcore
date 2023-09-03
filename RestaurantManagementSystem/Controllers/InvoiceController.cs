@@ -21,7 +21,10 @@ namespace RestaurantManagementSystem.Controllers {
             IQueryable<InvoiceViewModel> invoices =_rMSDBContext.Invoices.Select(x=>new InvoiceViewModel{
                 Id=x.Id,
                 EmployeeId = x.EmployeeId,
+                EmployeeNo=x.Employee.Code+":"+x.Employee.Name,
                 OrderId = x.OrderId,
+                OrderNo=x.Order.No,
+                TableNo=x.Order.Table.No,
                 PaymentWith=x.PaymentWith,
                 TotalAmount=x.TotalAmount,
                 No=x.No,

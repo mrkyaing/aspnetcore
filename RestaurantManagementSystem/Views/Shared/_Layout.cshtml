@@ -1,25 +1,20 @@
 ﻿@using Microsoft.AspNetCore.Identity
-
 @inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Restaurant Management System</title>
-@*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/RestaurantManagementSystem.styles.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/RestaurantManagementSystem.styles.css" asp-append-version="true" /> 
     <!-- font icons -->
     <link rel="stylesheet" href="~/assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Pigga main styles -->
     <link rel="stylesheet" href="~/assets/css/pigga.css">
 </head>
-
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-
     <!-- First Navigation -->
     <nav class="navbar nav-first navbar-dark bg-dark">
         <div class="container">
@@ -72,7 +67,7 @@
     </nav>
     <!-- End Of Second Navigation -->
 
-    <div class="container"><main role="main" class="pb-3"> @RenderBody()</main></div>
+    <div class="container"><main role="main"> @RenderBody()</main></div>
 
     <!-- Prefooter Section  -->
     <div class="py-4 border border-lighter border-bottom-0 border-left-0 border-right-0 bg-dark">
@@ -110,7 +105,10 @@
 
     </footer>
     <!-- End of Page Footer -->
-  
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/datatables.net/jquery.datatables.min.js"></script>
     <!--public web site js core  -->
     <script src="~/assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="~/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -122,10 +120,7 @@
     <script src="~/assets/js/pigga.js"></script>
     <!--end public web site js core  -->
 
-@*     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/lib/datatables.net/jquery.datatables.min.js"></script> *@
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

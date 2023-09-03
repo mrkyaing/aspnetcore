@@ -305,10 +305,11 @@ else {
                 <h6 class="section-subtitle text-center">Great Team</h6>
                 <h3 class="section-title mb-5 text-center">Talented Chefs</h3>
                 <div class="row">
+                @foreach (var e in ViewData["Employees"] as IList<EmployeeViewModel>) {
                     <div class="col-md-4 my-3">
                         <div class="team-wrapper text-center">
                             <img src="~/assets/imgs/chef-1.jpg" class="circle-120 rounded-circle mb-3 shadow" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
-                            <h5 class="my-3">Alex</h5>
+                            <h5 class="my-3">@e.Name</h5>
                             <p>i am cooking professional.</p>
                             <h6 class="socials mt-3">
                                 <a href="javascript:void(0)" class="px-2"><i class="ti-facebook"></i></a>
@@ -318,32 +319,7 @@ else {
                             </h6>
                         </div>
                     </div>
-                    <div class="col-md-4 my-3">
-                        <div class="team-wrapper text-center">
-                            <img src="~/assets/imgs/chef-2.jpg" class="circle-120 rounded-circle mb-3 shadow" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
-                            <h5 class="my-3">David</h5>
-                            <p>i am expert for preparing chinees foods.</p>
-                            <h6 class="socials mt-3">
-                                <a href="javascript:void(0)" class="px-2"><i class="ti-facebook"></i></a>
-                                <a href="javascript:void(0)" class="px-2"><i class="ti-twitter"></i></a>
-                                <a href="javascript:void(0)" class="px-2"><i class="ti-instagram"></i></a>
-                                <a href="javascript:void(0)" class="px-2"><i class="ti-google"></i></a>
-                            </h6>
-                        </div>
-                    </div>
-                    <div class="col-md-4 my-3">
-                        <div class="team-wrapper text-center">
-                            <img src="assets/imgs/chef-3.jpg" class="circle-120 rounded-circle mb-3 shadow" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
-                            <h5 class="my-3">Smith</h5>
-                            <p>i am master chief.be happy with eating everyday.</p>
-                            <h6 class="socials mt-3">
-                                <a href="javascript:void(0)" class="px-2"><i class="ti-facebook"></i></a>
-                                <a href="javascript:void(0)" class="px-2"><i class="ti-twitter"></i></a>
-                                <a href="javascript:void(0)" class="px-2"><i class="ti-instagram"></i></a>
-                                <a href="javascript:void(0)" class="px-2"><i class="ti-google"></i></a>
-                            </h6>
-                        </div>
-                    </div>
+                }
                 </div>
             </div>
         </section>

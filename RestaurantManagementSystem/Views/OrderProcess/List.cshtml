@@ -248,7 +248,6 @@
         //appending the data to the table body
         var productItem = '<tr><td style="visibility:hidden">' + productId + '</td><td>' + ProductName + '</td><td>' + UnitPrice + '</td><td>' + quantity + '</td><td>' + (parseFloat(UnitPrice) * parseInt(quantity)) + '</td><td>' + remark + '</td><td>' + '</td><td><a data-itemId="0" href="#" class="deleteItem">Remove</a></td></tr>';
         detailsTableBody.append(productItem);
-       
         clearItem();//method called to clear for selected product information.
         $('#orderDetailsModal').modal('hide');
     });//end of addToList click function.
@@ -260,7 +259,6 @@
                 $("#txtQty").val('');
                 $("#txtRemark").val('');
             }
-         
             $("#saveOrder").click(function (e) {
                 e.preventDefault();
               var orderDetails = [];//declare the array for orderDetails 

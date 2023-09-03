@@ -7,10 +7,10 @@ namespace RestaurantManagementSystem.Models {
         public string PaymentWith { get; set; }
        // [ForeignKey("OrderId")]
         public string OrderId { get; set; }
-       // public virtual OrderEntity Order { get; set; }
+       public virtual OrderEntity Order { get; set; }
         public decimal TotalAmount { get; set; }
        // [ForeignKey("EmployeeId")]
         public string EmployeeId { get; set; }
-      //  public  virtual   EmployeeEntity    Employee { get; set; }
+      public  virtual   EmployeeEntity    Employee { get; set; }
     }
 }

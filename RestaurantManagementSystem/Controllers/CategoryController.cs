@@ -1,27 +1,22 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using RestaurantManagementSystem.DAO;
-using RestaurantManagementSystem.Models;
 using RestaurantManagementSystem.Models.ViewModels;
-using RestaurantManagementSystem.Utilities;
+using RestaurantManagementSystem.Repostories;
+using RestaurantManagementSystem.Services;
 
 namespace RestaurantManagementSystem.Controllers {
     public class CategoryController : Controller {
-        private readonly RMSDBContext rMSDBContext;
-        //constructor injection  for RMSDBContext
-        public CategoryController(RMSDBContext context) {
-            rMSDBContext = context;
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly CategoryService _categoryService;
+
+        public CategoryController(ICategoryRepository categoryRepository)
+        {
+            _categoryRepository = categoryRepository;
+            _categoryService =new CategoryService(_categoryRepository);
         }
+
         public IActionResult List() {
-            IList<CategoryViewModel> categories = rMSDBContext.Categories.Select(x => new CategoryViewModel
-            //data exchange between View Model and Model >> DTO  
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Code = x.Code,
-            }).OrderBy(o => o.Code).ToList();
-            return View(categories);
+           return View(_categoryService.GetAll());
         }
         [Authorize(Roles ="Admin")]
         public IActionResult Entry() => View();
@@ -29,15 +24,7 @@ namespace RestaurantManagementSystem.Controllers {
         [HttpPost]
         public IActionResult Entry(CategoryViewModel viewModel) {
             try {
-                //DTO >> Data Transfer Object 
-                var categoryEntity = new CategoryEntity()
-                {
-                    Id = Guid.NewGuid().ToString(),//for new id when uer create the record 36 char GUID  , UUID 
-                    Name = viewModel.Name,//c101 
-                    Code = viewModel.Code
-                };
-                rMSDBContext.Categories.Add(categoryEntity);//adding the record to the products of db context
-                rMSDBContext.SaveChanges();// actually save to the database 
+                _categoryService.Create(viewModel);
                 TempData["Msg"] = "1 record is created successfully";
             }
             catch (Exception ex) {
@@ -48,12 +35,7 @@ namespace RestaurantManagementSystem.Controllers {
         [Authorize(Roles = "Admin")]
         public IActionResult Delete(string Id) {
             try {
-                var entity = rMSDBContext.Categories.Where(x => x.Id.Equals(Id)).SingleOrDefault();
-                if (entity == null) {
-                    TempData["Msg"] = "There is no recrod that you select.";
-                }
-                rMSDBContext.Categories.Remove(entity);// collect the data to remove
-                rMSDBContext.SaveChanges();// remove the record from the database 
+                _categoryService.DeleteById(Id);
                 TempData["Msg"] = "delete process is completed successfully.";
             }
             catch (Exception e) {
@@ -63,28 +45,13 @@ namespace RestaurantManagementSystem.Controllers {
         }
         [Authorize(Roles = "Admin")]
         public IActionResult Edit(string Id) {
-            var viewModel = rMSDBContext.Categories.Where(x => x.Id.Equals(Id)).Select(x => new CategoryViewModel
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Code = x.Code,
-            }).SingleOrDefault();
-
-            return View(viewModel);
+            return View(_categoryService.GetById(Id));
         }
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Update(CategoryViewModel viewModel) {
             try {
-                //DTO >> Data Transfer Object 
-                var entity = new CategoryEntity()
-                {
-                    Id = viewModel.Id,//not to generate new id because this is update processs 
-                    Name = viewModel.Name,//c101
-                    Code = viewModel.Code
-                };
-                rMSDBContext.Entry(entity).State = EntityState.Modified;//editing the record to the products of db context
-                rMSDBContext.SaveChanges();// actually update to the database 
+                _categoryService.Update(viewModel);
                 TempData["Msg"] = "update process is completed successfully.";
             }
             catch (Exception e) {
@@ -92,6 +59,5 @@ namespace RestaurantManagementSystem.Controllers {
             }
             return RedirectToAction("List");
         }
-
     }
 }
