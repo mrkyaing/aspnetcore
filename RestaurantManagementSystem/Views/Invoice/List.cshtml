@@ -19,6 +19,7 @@
             <th>OrderId </th>
             <th >Total Amount (MMK)</th>
             <th>EmployeeId</th>
+            <th>Table No</th>
             <th >Actions</th>
         </tr>
     </thead>
@@ -31,10 +32,12 @@
                 <th scope="row">@index</th>
                 <td>@product.No</td>
                 <td>@product.PaymentWith</td>
-                <td>@product.OrderId </td>
+                <td>@product.OrderNo </td>
                 <td>@product.TotalAmount</td>
-                <td>@product.EmployeeId</td>
+                <td>@product.EmployeeNo</td>
+                <td>@product.TableNo</td>
                 <td>
+                     <a href="/orderprocess/CheckOrderAndOrderDetails?orderId=@product.OrderId" class="btn btn-warning" role="button">Detail</a>
                     <a href="/invoice/edit?Id=@product.Id" class="btn btn-success" role="button">edit</a>
                     <a href="/invoice/delete?Id=@product.Id" onclick=" return confirm('are you sure to delete this record?');" class="btn btn-danger" role="button">delete</a>
                 </td>

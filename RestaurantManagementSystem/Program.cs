@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RestaurantManagementSystem.DAO;
+using RestaurantManagementSystem.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.

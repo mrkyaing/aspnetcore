@@ -28,6 +28,12 @@ namespace RestaurantManagementSystem.Controllers {
                 Name=x.Name,
                 ProductCounts=x.Products.Count()
             }).ToList();
+            ViewData["Employees"] = _rMSDBContext.Employees.Where(x =>( !x.Position.Name.Equals("Cashier"))).Select(s => new EmployeeViewModel
+            {
+                Id = s.Id,
+                Name = s.Code + ":" + s.Name,
+            }).ToList();
+
             return View();
         }
 
