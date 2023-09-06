@@ -3,7 +3,8 @@ using RestaurantManagementSystem.Models.ViewModels;
 using RestaurantManagementSystem.Repostories;
 
 namespace RestaurantManagementSystem.Services {
-    public class CategoryService {
+    public class CategoryService: ICategoryService
+    {
         private readonly ICategoryRepository _categoryRepository;
         public CategoryService(ICategoryRepository category){
             _categoryRepository = category;

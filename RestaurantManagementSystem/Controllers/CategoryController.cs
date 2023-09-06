@@ -1,18 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RestaurantManagementSystem.Models.ViewModels;
-using RestaurantManagementSystem.Repostories;
 using RestaurantManagementSystem.Services;
 
 namespace RestaurantManagementSystem.Controllers {
     public class CategoryController : Controller {
-        private readonly ICategoryRepository _categoryRepository;
-        private readonly CategoryService _categoryService;
+        private readonly ICategoryService _categoryService;
 
-        public CategoryController(ICategoryRepository categoryRepository)
+        public CategoryController(ICategoryService categoryService)
         {
-            _categoryRepository = categoryRepository;
-            _categoryService =new CategoryService(_categoryRepository);
+            _categoryService = categoryService;
         }
 
         public IActionResult List() {
