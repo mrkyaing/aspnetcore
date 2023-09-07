@@ -1,7 +1,12 @@
-﻿namespace CurrencyConvertor.Models {
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CurrencyConvertor.Models {
+    [Table("Employee")]
     public class EmployeeModel {
-      //Encapsulated Proepties variales to save the values
-       public string Id { get; set; }
+        //Encapsulated Proepties variales to save the values
+        [Key]
+        public string Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
