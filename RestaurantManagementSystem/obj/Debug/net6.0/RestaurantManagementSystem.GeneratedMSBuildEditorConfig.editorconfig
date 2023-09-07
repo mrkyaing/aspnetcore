@@ -9,189 +9,189 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RestaurantManagementSystem
 build_property.RootNamespace = RestaurantManagementSystem
-build_property.ProjectDir = C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem\
+build_property.ProjectDir = D:\Me\aspnetcore\RestaurantManagementSystem\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\DELL\source\repos\aspnetcore\RestaurantManagementSystem
+build_property.MSBuildProjectDirectory = D:\Me\aspnetcore\RestaurantManagementSystem
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Category/Edit.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Category/Entry.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Category/Entry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRW50cnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Category/List.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Category/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Dashboard/Index.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Employee/Edit.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Employee/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Employee/EmployeeDetailReport.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Employee/EmployeeDetailReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wbG95ZWVEZXRhaWxSZXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Employee/Entry.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Employee/Entry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW50cnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Employee/List.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Employee/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Home/Index.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Invoice/Entry.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Invoice/Entry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxFbnRyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Invoice/List.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Invoice/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/OrderProcess/CheckOrderAndOrderDetails.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/OrderProcess/CheckOrderAndOrderDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9jZXNzXENoZWNrT3JkZXJBbmRPcmRlckRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/OrderProcess/Entry.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/OrderProcess/Entry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9jZXNzXEVudHJ5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/OrderProcess/List.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/OrderProcess/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9jZXNzXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Position/Edit.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Position/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaXRpb25cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Position/Entry.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Position/Entry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaXRpb25cRW50cnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Position/List.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Position/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaXRpb25cTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Product/Edit.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Product/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Product/Entry.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Product/Entry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFbnRyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Product/List.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Product/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Shared/Error.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Shared/_LoginPartial.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Table/Edit.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Table/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Table/Entry.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Table/Entry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVcRW50cnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Table/List.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Table/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/_ViewImports.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/_ViewStart.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Shared/_AdminLayout.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-wzene13vh9
 
-[C:/Users/DELL/source/repos/aspnetcore/RestaurantManagementSystem/Views/Shared/_Layout.cshtml]
+[D:/Me/aspnetcore/RestaurantManagementSystem/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7ks0lkohyd

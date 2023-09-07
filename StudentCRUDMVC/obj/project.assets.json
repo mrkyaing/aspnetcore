@@ -2014,19 +2014,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\StudentCRUDMVC\\StudentCRUDMVC.csproj",
+      "projectUniqueName": "D:\\Me\\aspnetcore\\StudentCRUDMVC\\StudentCRUDMVC.csproj",
       "projectName": "StudentCRUDMVC",
-      "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\StudentCRUDMVC\\StudentCRUDMVC.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\StudentCRUDMVC\\obj\\",
+      "projectPath": "D:\\Me\\aspnetcore\\StudentCRUDMVC\\StudentCRUDMVC.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\Me\\aspnetcore\\StudentCRUDMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\aspnetcore\\CurrencyConvertor\\CurrencyConvertor.csproj": {}
+    "D:\\Me\\aspnetcore\\CurrencyConvertor\\CurrencyConvertor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\aspnetcore\\CurrencyConvertor\\CurrencyConvertor.csproj": {
+    "D:\\Me\\aspnetcore\\CurrencyConvertor\\CurrencyConvertor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\CurrencyConvertor\\CurrencyConvertor.csproj",
+        "projectUniqueName": "D:\\Me\\aspnetcore\\CurrencyConvertor\\CurrencyConvertor.csproj",
         "projectName": "CurrencyConvertor",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\CurrencyConvertor\\CurrencyConvertor.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\CurrencyConvertor\\obj\\",
+        "projectPath": "D:\\Me\\aspnetcore\\CurrencyConvertor\\CurrencyConvertor.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Me\\aspnetcore\\CurrencyConvertor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,22 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

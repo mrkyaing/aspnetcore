@@ -11647,19 +11647,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj",
+      "projectUniqueName": "D:\\Me\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj",
       "projectName": "RestaurantManagementSystem",
-      "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\obj\\",
+      "projectPath": "D:\\Me\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\Me\\aspnetcore\\RestaurantManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11673,8 +11673,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj": {
-              "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj"
+            "D:\\Me\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj": {
+              "projectPath": "D:\\Me\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj"
             }
           }
         }

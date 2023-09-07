@@ -12,3 +12,17 @@ C:\Users\DELL\source\repos\aspnetcore\CollectionPractice\obj\Debug\net6.0\refint
 C:\Users\DELL\source\repos\aspnetcore\CollectionPractice\obj\Debug\net6.0\CollectionPractice.pdb
 C:\Users\DELL\source\repos\aspnetcore\CollectionPractice\obj\Debug\net6.0\CollectionPractice.genruntimeconfig.cache
 C:\Users\DELL\source\repos\aspnetcore\CollectionPractice\obj\Debug\net6.0\ref\CollectionPractice.dll
+D:\Me\aspnetcore\CollectionPractice\bin\Debug\net6.0\CollectionPractice.exe
+D:\Me\aspnetcore\CollectionPractice\bin\Debug\net6.0\CollectionPractice.deps.json
+D:\Me\aspnetcore\CollectionPractice\bin\Debug\net6.0\CollectionPractice.runtimeconfig.json
+D:\Me\aspnetcore\CollectionPractice\bin\Debug\net6.0\CollectionPractice.dll
+D:\Me\aspnetcore\CollectionPractice\bin\Debug\net6.0\CollectionPractice.pdb
+D:\Me\aspnetcore\CollectionPractice\obj\Debug\net6.0\CollectionPractice.GeneratedMSBuildEditorConfig.editorconfig
+D:\Me\aspnetcore\CollectionPractice\obj\Debug\net6.0\CollectionPractice.AssemblyInfoInputs.cache
+D:\Me\aspnetcore\CollectionPractice\obj\Debug\net6.0\CollectionPractice.AssemblyInfo.cs
+D:\Me\aspnetcore\CollectionPractice\obj\Debug\net6.0\CollectionPractice.csproj.CoreCompileInputs.cache
+D:\Me\aspnetcore\CollectionPractice\obj\Debug\net6.0\CollectionPractice.dll
+D:\Me\aspnetcore\CollectionPractice\obj\Debug\net6.0\refint\CollectionPractice.dll
+D:\Me\aspnetcore\CollectionPractice\obj\Debug\net6.0\CollectionPractice.pdb
+D:\Me\aspnetcore\CollectionPractice\obj\Debug\net6.0\CollectionPractice.genruntimeconfig.cache
+D:\Me\aspnetcore\CollectionPractice\obj\Debug\net6.0\ref\CollectionPractice.dll

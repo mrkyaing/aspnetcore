@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj": {}
+    "D:\\Me\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj": {
+    "D:\\Me\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj",
+        "projectUniqueName": "D:\\Me\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj",
         "projectName": "RestaurantManagementSystem",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RestaurantManagementSystem\\obj\\",
+        "projectPath": "D:\\Me\\aspnetcore\\RestaurantManagementSystem\\RestaurantManagementSystem.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Me\\aspnetcore\\RestaurantManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj": {
-                "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj"
+              "D:\\Me\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj": {
+                "projectPath": "D:\\Me\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj"
               }
             }
           }
@@ -128,11 +128,11 @@
         }
       }
     },
-    "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj": {
+    "D:\\Me\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj",
+        "projectUniqueName": "D:\\Me\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj",
         "projectName": "RMSReportHelpers",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj",
+        "projectPath": "D:\\Me\\aspnetcore\\RMSReportHelpers\\RMSReportHelpers.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {}

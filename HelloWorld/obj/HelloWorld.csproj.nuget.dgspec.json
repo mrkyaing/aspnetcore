@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\aspnetcore\\HelloWorld\\HelloWorld.csproj": {}
+    "D:\\Me\\aspnetcore\\HelloWorld\\HelloWorld.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\aspnetcore\\HelloWorld\\HelloWorld.csproj": {
+    "D:\\Me\\aspnetcore\\HelloWorld\\HelloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\HelloWorld\\HelloWorld.csproj",
+        "projectUniqueName": "D:\\Me\\aspnetcore\\HelloWorld\\HelloWorld.csproj",
         "projectName": "HelloWorld",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\HelloWorld\\HelloWorld.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\aspnetcore\\HelloWorld\\obj\\",
+        "projectPath": "D:\\Me\\aspnetcore\\HelloWorld\\HelloWorld.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Me\\aspnetcore\\HelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
