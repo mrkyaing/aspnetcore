@@ -28,6 +28,7 @@ namespace RestaurantManagementSystem.Controllers {
         public IActionResult Entry(TableViewModel viewModel) {
             try {
                 var entity = new TableEntity();
+                entity.Id = Guid.NewGuid().ToString();//for new id when uer create the record 36 char GUID  , UUID 
                 entity.No = viewModel.No;
                 entity.Status=viewModel.Status;
                 entity.AvailableCapacityPerson=viewModel.AvailableCapacityPerson;
@@ -66,7 +67,12 @@ namespace RestaurantManagementSystem.Controllers {
         [HttpPost]
         public IActionResult Update(TableViewModel viewModel) {
             try {
-                var entity = mapper.Map<TableEntity>(viewModel);
+                var entity = new TableEntity();
+                entity.Id =viewModel.Id;//for update purpose
+                entity.No = viewModel.No;
+                entity.Status = viewModel.Status;
+                entity.AvailableCapacityPerson = viewModel.AvailableCapacityPerson;
+                entity.IsAvailable = viewModel.IsAvailable.Equals("y") ? true : false;
                 rMSDBContext.Entry(entity).State = EntityState.Modified;//editing the record to the products of db context
                 rMSDBContext.SaveChanges();// actually update to the database 
                 TempData["Msg"] = "update process is completed successfully.";

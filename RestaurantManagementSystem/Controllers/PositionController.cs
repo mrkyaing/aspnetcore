@@ -25,7 +25,15 @@ namespace RestaurantManagementSystem.Controllers {
         public IActionResult Entry(PositionViewModel viewModel) {
             try {
                 //DTO >> Data Transfer Object 
+                var IsAlreadyExists = rMSDBContext.Positions.Any(x=>x.Code.Equals(viewModel.Code));
+                if (IsAlreadyExists)
+                {
+                    TempData["Msg"] = $"Oh,Sorry {viewModel.Code} is already existed in system.";
+                    return RedirectToAction("List");
+                }
+                
                 var entity = mapper.Map<PositionEntity>(viewModel);
+                entity.Id = Guid.NewGuid().ToString();
                 rMSDBContext.Positions.Add(entity);//adding the record to the products of db context
                 rMSDBContext.SaveChanges();// actually save to the database 
                 TempData["Msg"] = "1 record is created successfully";

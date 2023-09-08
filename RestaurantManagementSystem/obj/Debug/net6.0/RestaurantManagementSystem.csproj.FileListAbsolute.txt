@@ -580,3 +580,5 @@ D:\Me\aspnetcore\RestaurantManagementSystem\obj\Debug\net6.0\refint\RestaurantMa
 D:\Me\aspnetcore\RestaurantManagementSystem\obj\Debug\net6.0\RestaurantManagementSystem.pdb
 D:\Me\aspnetcore\RestaurantManagementSystem\obj\Debug\net6.0\RestaurantManagementSystem.genruntimeconfig.cache
 D:\Me\aspnetcore\RestaurantManagementSystem\obj\Debug\net6.0\ref\RestaurantManagementSystem.dll
+D:\Me\aspnetcore\RestaurantManagementSystem\bin\Debug\net6.0\MySqlConnector.dll
+D:\Me\aspnetcore\RestaurantManagementSystem\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll

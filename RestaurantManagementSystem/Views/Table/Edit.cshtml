@@ -7,6 +7,7 @@
     <hr />
     <form action="/table/update" method="post">
         <div class="mb-3">
+           <input type="hidden" name="Id" value="@Model.Id"/>
             <label class="form-label">Table No</label>
             <input class="form-control" type="text" name="No"  value="@Model.No" required />
         </div>
